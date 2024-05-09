@@ -1,0 +1,99 @@
+/* Réinitialisation de base pour enlever les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Police par défaut */
+    line-height: 1.6; /* Espacement des lignes */
+    color: #333; /* Couleur de texte principale */
+    background-color: #9E8B74; /* Main BG Color */
+}
+
+/* Container principal pour le contenu */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Style de base pour les en-têtes */
+h1, h2, h3, h4, h5, h6 {
+    color: #46512E; /* Kaki Green */
+}
+
+/* Navigation */
+nav {
+    background: #534534; /* Accent Brown */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Stylisation des cartes pour les véhicules */
+.card {
+    background: #D9D9D9; /* Light Grey */
+    border: 1px solid #1E1E1E; /* Second BG Color */
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    color: #46512E; /* Kaki Green */
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.card .btn {
+    display: inline-block;
+    background: #46512E; /* Kaki Green */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card .btn:hover {
+    background: #3A4220; /* Darkened Kaki Green */
+}
+
+/* Footer */
+footer {
+    background: #534534; /* Accent Brown */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+}
+
+footer p {
+    margin: 10px 0;
+}
