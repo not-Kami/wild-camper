@@ -1,0 +1,36 @@
+/* Font Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap');
+
+/*Variables*/
+
+:root {
+    /* Color Palette from Figma */
+    --kaki-green: #46512E;       /* Used for headers, footers, etc */
+    --second-bg-color: #1E1E1E;  /* Secondary background color */
+    --main-bg-color: #9E8B74;    /* Main background color */
+    --light-grey: #D9D9D9;       /* Used for lighter text or elements */
+    --accent-brown: #534534;     /* Accent color for buttons, links, etc */
+    --white-text: #EEEEEE;       /* Text color for dark backgrounds */
+
+    /* Typography */
+    --font-primary: 'Roboto', sans-serif; /* Primary font for text */
+    --font-secondary: 'Yellowtail', cursive; /* Secondary font for headers */
+
+    /* Font Sizes */
+    --font-size-paragraph: 14px; /* Standard text size */
+    --font-size-h1: 36px;        /* For main titles */
+    --font-size-h2: 32px;        /* For secondary titles, Yellowtail */
+    --font-size-h3: 28px;
+    --font-size-h4: 24px;
+    --font-size-nav: 18px;       /* Navigation links */
+    --font-size-btn: 18px;       /* Buttons text */
+    
+/* Spacing */
+      
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+    --spacing-xlarge: 48px;
+}
+
