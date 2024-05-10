@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WildCampers - Your Ultimate Adventure Companion!</title>
-    <link rel="stylesheet" href="../style/style.css"> <!-- Assure-toi que le chemin vers ton fichier CSS est correct -->
+    <title>Wild Campers - Your Ultimate Adventure Companion!</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="booking.php">Booking</a></li>
-                <li><a href="pricing.php">Pricing</a></li>
-                <li><a href="about_us.php">About us</a></li>
+                <li><a href="index.php?page=home">Home</a></li>
+                <li><a href="index.php?page=booking">Booking</a></li>
+                <li><a href="index.php?page=pricing">Pricing</a></li>
+                <li><a href="index.php?page=about_us">About us</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <!-- Ici, nous incluons des sections modulaires selon la page -->
-        <?php if (isset($content)) echo $content; ?>
-        <?php if (isset($hero)) include $hero; ?>
-        <?php if (isset($featured_vehicles)) include $featured_vehicles; ?>
-        <?php if (isset($contact_form)) include $contact_form; ?>
+        <?php include 'pages/' .$page'.php'; ?>
     </main>
 
     <footer>
-        <p>Quick Links:</p>
-        <ul>
-            <li><a href="about_us.php">About Us</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="pricing.php">Pricing</a></li>
-            <li><a href="faq.php">FAQ</a></li>
-        </ul>
-        <p>Contact Information: Phone: (123) 456-7890 Email: info@wildcampers.com Address: 123 Mountain Road, Canadian Wilderness</p>
-        <p>&copy; 2024 WildCampers. All rights reserved.</p>
-        <p>Terms of Service | Privacy Policy</p>
+        <div class="footer-content">
+            <p>© 2024 WildCampers. All rights reserved.</p>
+            <p>Contact Info: 123-456-7890 | info@wildcampers.com</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">X</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

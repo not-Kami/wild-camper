@@ -1,6 +1,16 @@
-<?php
-$hero = 'sections/hero.php';
-$featured_vehicles = 'sections/featured_vehicles.php';
-$contact_form = 'sections/contact_form.php';
+<?php 
+
+$page = 'home';
+
+if(isset($_GET['page'])) {
+    $filename = 'pages/' . $_GET['page'] . '.php';
+    if(file_exists($filename)) {
+        $page = $_GET['page'];
+    } else {
+        $page = '404';
+    }
+}
+
 include 'skeleton.php';
+
 ?>
