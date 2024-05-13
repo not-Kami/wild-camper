@@ -1,5 +1,5 @@
 html, body {
-    height: 100%; /* S'assurer que le HTML et body prennent toute la hauteur */
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -7,12 +7,14 @@ html, body {
 }
 
 body {
-    min-height: 100vh; /* 100% de la hauteur de la fenêtre du navigateur */
+    flex: 1;  /* Ensures body takes up the rest of the space */
+    min-height: 100vh; /* Ensures at least full viewport height */
     display: flex;
     flex-direction: column;
     background-color: var(--main-bg-color);
     font-family: var(--font-primary);
 }
+
 header {
     background-color: var(--accent-brown);
     color: var(--white-text);
@@ -21,15 +23,15 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 80px; /* Définir une hauteur pour le header */
+    min-height: 80px; /* Définir une hauteur pour le header */
 }
 
 .logo {
     position: absolute;
     left: 20px;
-    height: 100%; /* Utiliser 100% de la hauteur du header */
-    max-height: 80px; /* Ne pas dépasser 80px */
+    height: 80%; /* Utiliser 100% de la hauteur du header */
     width: auto; /* Maintenir les proportions du logo */
+    transform: scaleX(-1);
 }
 
 nav {
@@ -39,6 +41,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80px;
 }
 
 nav ul {
@@ -58,9 +61,136 @@ nav ul li a {
 
 main {
     flex: 1; /* Prend tout l'espace disponible */
-    padding: 20px; /* Padding pour le contenu */
     display: flex; /* Permet à main d'être flexible */
     flex-direction: column; /* Direction de flux du contenu */
+}
+
+.hero {
+    background-image: url('../img/hero_land_rover.png'); /* Adjust path as necessary */
+    background-size: cover;
+    background-position: center;
+    height: 65vh; /* Full viewport height */
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right */
+    align-items: center; /* Vertically centers content */
+    color: var(--white-text);
+    padding-right: var(--spacing-large); /* Right padding to ensure content does not touch the edge */
+}
+
+.hero-content {
+    text-align: right; /* Text aligns right */
+    max-width: 50%; /* Limits the width of the content, adjust as necessary */
+}
+
+.hero-content h1,
+.hero-content p {
+    margin: var(--spacing-small) 0; /* Vertical spacing */
+}
+
+.hero-content button {
+    display: block; /* Makes the button a block element */
+    width: auto; /* Auto width according to text size */
+    margin: var(--spacing-medium) auto 0; /* Top margin and horizontally centered */
+    padding: 10px 20px; /* Button padding */
+    background-color: var(--kaki-green);
+    color: var(--white-text);
+    border: none;
+    border-radius: 20px; /* Fully rounded corners */
+    cursor: pointer; /* Indicates the button is clickable */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        justify-content: center; /* Center content on smaller screens */
+        padding-right: 0; /* Remove right padding on small screens */
+    }
+
+    .hero-content {
+        text-align: center; /* Center text on smaller screens */
+        max-width: 80%; /* Wider content area on smaller screens */
+    }
+}
+
+
+
+.social-links img {
+    width: 24px; /* Taille des icônes */
+    height: 24px;
+}
+
+h2 {
+    font-family: var(--font-secondary); /* Only H2 uses Yellowtail */
+    font-size: var(--font-size-h2);
+    color: var(--light-grey);
+}
+/* General button styling */
+
+/* Button general style - applied to all buttons */
+.button {
+    background-color: var(--kaki-green); /* Button background color */
+    color: var(--white-text);             /* Text color for the button */
+    border: none;                         /* No border */
+    border-radius: 20px;                  /* Pill shape */
+    padding: 10px 20px;                   /* Padding to adjust button size */
+    cursor: pointer;                      /* Cursor changes to pointer to indicate it's clickable */
+    text-align: center;                   /* Center the text inside the button */
+    display: inline-block;                /* Allows the button to size according to its content */
+    margin: 0 auto;                       /* Center the button horizontally if needed */
+    width: auto;                          /* Width according to content size */
+}
+
+
+/* Contact section styles for full height and equal width */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centers content vertically */
+    padding: var(--spacing-large);
+    background-color: var(--second-bg-color);
+    color: var(--white-text);
+}
+
+.contact-info, 
+.contact-form {
+    flex-basis: 50%; /* Each takes up 50% of the flex container */
+    max-width: 50%; /* Ensures that neither section exceeds half of the container */
+    padding: var(--spacing-large); /* Adds padding within each section */
+}
+
+.form-group {
+    margin-bottom: var(--spacing-medium);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-small);
+    background-color: var(--white-text);
+    border: 1px solid var(--light-grey);
+    color: var(--second-bg-color);
+    border-radius: 10px; /* Rounded corners */
+}
+
+textarea {
+    height: 150px; /* Sets a fixed height for text area */
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        min-height: auto;
+        height: auto;
+    }
+    
+    .contact-info, 
+    .contact-form {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
 }
 
 footer {
@@ -74,6 +204,7 @@ footer {
     display: flex;
     justify-content: space-between; /* Alignement horizontal des sections */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    position: relative; /* Add position relative to the parent element */
 }
 
 .footer-links, .footer-contact, .footer-legal {
@@ -103,16 +234,4 @@ footer {
     right: 20px; /* 20px de la droite */
     display: flex; /* Flex pour aligner les icônes */
     gap: 10px; /* Espace entre les icônes */
-
-}
-
-.social-links img {
-    width: 24px; /* Taille des icônes */
-    height: 24px;
-}
-
-h2 {
-    font-family: var(--font-secondary); /* Only H2 uses Yellowtail */
-    font-size: var(--font-size-h2);
-    color: var(--light-grey);
 }
