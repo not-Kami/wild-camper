@@ -17,7 +17,10 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
             </div>
+
             <button type="submit" class="button submit-btn">Submit</button>
+
+
         </form>
     </div>
 </div>

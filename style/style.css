@@ -234,4 +234,16 @@ footer {
     right: 20px; /* 20px de la droite */
     display: flex; /* Flex pour aligner les icônes */
     gap: 10px; /* Espace entre les icônes */
+
+}
+
+.social-links img {
+    width: 24px; /* Taille des icônes */
+    height: 24px;
+}
+
+h2 {
+    font-family: var(--font-secondary); /* Only H2 uses Yellowtail */
+    font-size: var(--font-size-h2);
+    color: var(--light-grey);
 }
