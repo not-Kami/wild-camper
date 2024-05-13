@@ -63,40 +63,34 @@ main {
     flex: 1; /* Prend tout l'espace disponible */
     display: flex; /* Permet à main d'être flexible */
     flex-direction: column; /* Direction de flux du contenu */
-}
-
-.hero {
-    background-image: url('../img/hero_land_rover.png'); /* Adjust path as necessary */
+}.hero {
+    background-image: url('../img/hero_land_rover.png');
     background-size: cover;
     background-position: center;
-    height: 65vh; /* Full viewport height */
-    display: flex;
-    justify-content: flex-end; /* Aligns content to the right */
-    align-items: center; /* Vertically centers content */
+    height: 65vh;
     color: var(--white-text);
-    padding-right: var(--spacing-large); /* Right padding to ensure content does not touch the edge */
+    width: 100%;
 }
 
 .hero-content {
-    text-align: right; /* Text aligns right */
-    max-width: 50%; /* Limits the width of the content, adjust as necessary */
+    text-align: right;
+    width: 100%; /* Sets the width to 100% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .hero-content h1,
 .hero-content p {
-    margin: var(--spacing-small) 0; /* Vertical spacing */
+    margin: var(--spacing-medium) var(--spacing-xlarge);
 }
 
 .hero-content button {
-    display: block; /* Makes the button a block element */
-    width: auto; /* Auto width according to text size */
-    margin: var(--spacing-medium) auto 0; /* Top margin and horizontally centered */
-    padding: 10px 20px; /* Button padding */
-    background-color: var(--kaki-green);
-    color: var(--white-text);
-    border: none;
-    border-radius: 20px; /* Fully rounded corners */
-    cursor: pointer; /* Indicates the button is clickable */
+    display: block;
+    width: auto;
+    margin: var(--spacing-medium) auto 0;
+    padding: 10px 20px;
 }
 
 /* Responsive adjustments for smaller screens */
@@ -112,19 +106,22 @@ main {
     }
 }
 
-
-
-.social-links img {
-    width: 24px; /* Taille des icônes */
-    height: 24px;
-}
-
 h2 {
     font-family: var(--font-secondary); /* Only H2 uses Yellowtail */
     font-size: var(--font-size-h2);
     color: var(--light-grey);
 }
-/* General button styling */
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
 
 /* Button general style - applied to all buttons */
 .button {
@@ -192,24 +189,44 @@ textarea {
         max-width: 100%;
     }
 }
-
 footer {
+    position: relative; /* Essential for containing absolutely positioned children */
     background-color: var(--kaki-green);
     color: var(--white-text);
-    padding: 10px 20px; /* Réduit le padding pour un footer moins épais */
-    font-size: 12px; /* Taille de police réduite pour tout le footer */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 12px; /* Smaller font size for footer content */
+    width: 100%; /* Ensures footer takes full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically aligns the footer content */
+    box-sizing: border-box; /* Include padding and border in the total width */
 }
 
 .footer-container {
+    width: 100%; /* Ensure the container takes full width of the footer */
     display: flex;
-    justify-content: space-between; /* Alignement horizontal des sections */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    position: relative; /* Add position relative to the parent element */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    box-sizing: border-box; /* Include padding and border in the total width */
 }
 
+.social-links {
+    position: absolute;
+    bottom: 10px; /* Position from the bottom of the footer */
+    right: 20px; /* Position from the right of the footer */
+    display: flex;
+    gap: 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Ensuring other elements are properly aligned and sized */
 .footer-links, .footer-contact, .footer-legal {
-    text-align: left; /* Alignement à gauche du texte */
-    margin: 5px 10px; /* Réduction des marges pour un look plus compact */
+    text-align: left;
+    padding: 5px; /* Adjust padding for visual balance */
 }
 
 .footer-links ul, .footer-legal ul {
@@ -219,31 +236,29 @@ footer {
 }
 
 .footer-links li, .footer-legal li {
-    padding: 2px 0; /* Espacement vertical réduit entre les liens */
+    padding: 2px 0; /* Reduced vertical spacing */
 }
 
 .footer-copy {
-    text-align: center; /* Centrer le texte de copyright */
-    width: 100%; /* Assure que le texte de copyright s'étend sur toute la largeur */
+    text-align: center;
+    width: 100%; /* Full width to center the text appropriately */
+    position: absolute;
+    bottom: 0; /* Align at the bottom */
+    left: 0; /* Align to the left */
 }
 
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.social-links {
-    position: absolute; /* Positionnement absolu */
-    bottom: 10px; /* 10px du bas */
-    right: 20px; /* 20px de la droite */
-    display: flex; /* Flex pour aligner les icônes */
-    gap: 10px; /* Espace entre les icônes */
-
-}
-
-.social-links img {
-    width: 24px; /* Taille des icônes */
-    height: 24px;
-}
-
-h2 {
-    font-family: var(--font-secondary); /* Only H2 uses Yellowtail */
-    font-size: var(--font-size-h2);
-    color: var(--light-grey);
+    .social-links {
+        position: absolute; /* Absolute position on small screens */
+        bottom: 10px; /* Position from the bottom of the footer */
+        right: 50%; /* Position in the middle of the footer */
+        transform: translateX(50%); /* Center horizontally */
+        display: flex;
+        gap: 10px;
+    }
 }

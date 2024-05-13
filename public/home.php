@@ -1,5 +1,5 @@
 <?php
 include 'hero.php';
-include 'catalog.php';
+include 'carousel.php';
 include 'contact.php';
 ?>
