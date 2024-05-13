@@ -116,3 +116,73 @@ h2 {
     font-size: var(--font-size-h2);
     color: var(--light-grey);
 }
+/* General button styling */
+
+.button {
+    background-color: var(--kaki-green); /* Using the accent color */
+    color: var(--white-text);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-btn);
+    text-transform: uppercase; /* Optional: making button text uppercase */
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--kaki-green); /* Darker shade on hover */
+}
+
+/* Contact section styles integration with variables */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-large);
+    background-color: var(--second-bg-color);
+    color: var(--white-text);
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: var(--spacing-large);
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-medium);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-small);
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid var(--light-grey);
+    color: var(--white-text);
+}
+
+button.submit-btn {
+    width: 100%; /* Ensuring full width for consistency */
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: none;
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
