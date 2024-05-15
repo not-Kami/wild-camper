@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wild Campers - Your Ultimate Adventure Companion!</title>
     <link rel="stylesheet" href="../style/global.css">
-    <link rel="stylesheet" href="../style/style.css">
+    
+    <?php
+    // Détermine le nom de la page actuelle
+    $page = basename($_SERVER['PHP_SELF'], ".php");
+    
+    // Inclut des fichiers CSS spécifiques selon la page
+    if ($page == 'home') {
+        echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splide@4.0.11/dist/css/splide.min.css">';
+        echo '<script defer src="https://cdn.jsdelivr.net/npm/splide@4.0.11/dist/js/splide.min.js"></script>';
+
+        echo '<link rel="stylesheet" type="text/css" href="style/hero.css">';
+        echo '<link rel="stylesheet" type="text/css" href="style/carousel.css">';
+        echo '<link rel="stylesheet" type="text/css" href="style/contact.css">';
+    } elseif ($page == 'about') {
+        echo '<link rel="stylesheet" type="text/css" href="style/about.css">';
+    } elseif ($page == 'contact') {
+        echo '<link rel="stylesheet" type="text/css" href="style/contact.css">';
+    }
+    ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
+
 <body>
 <header>
     <img src="img/wild-camper-logo.svg" alt="Wild Camper Logo" class="logo">
@@ -15,7 +34,7 @@
         <ul>
             <li><a href="index.php?page=home">Home</a></li>
             <li><a href="index.php?page=booking">Booking</a></li>
-            <li><a href="index.php?page=pricing">Pricing</a></li>
+            <li><a href="index.php?page=fleet">Our fleet</a></li>
             <li><a href="index.php?page=about_us">About us</a></li>
         </ul>
     </nav>

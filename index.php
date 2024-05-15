@@ -11,6 +11,6 @@ if(isset($_GET['page'])) {
     }
 }
 
-include 'public/skeleton.php';
+include 'public/components/skeleton.php';
 
 ?>

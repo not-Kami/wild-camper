@@ -33,4 +33,173 @@
     --spacing-large: 32px;
     --spacing-xlarge: 48px;
 }
+/* Global styles */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;  /* Ensures body takes up the rest of the space */
+    min-height: 100vh; /* Ensures at least full viewport height */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    font-family: var(--font-primary);
+}
+
+/* Header and navigation styles */
+
+header {
+    background-color: var(--accent-brown);
+    color: var(--white-text);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 80px; /* Définir une hauteur pour le header */
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    height: 80%; /* Utiliser 100% de la hauteur du header */
+    width: auto; /* Maintenir les proportions du logo */
+    transform: scaleX(-1);
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centrer le nav horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white-text);
+    font-size: var(--font-size-nav);
+    padding: 10px;
+}
+
+/* Main content styles */
+
+main {
+    flex: 1; /* Prend tout l'espace disponible */
+    display: flex; /* Permet à main d'être flexible */
+    flex-direction: column; /* Direction de flux du contenu */
+}
+
+/* Overall text styles */
+h2 {
+    font-family: var(--font-secondary); /* Only H2 uses Yellowtail */
+    font-size: var(--font-size-h2);
+    color: var(--light-grey);
+}
+
+/* Button general style - applied to all buttons */
+
+.button {
+    background-color: var(--kaki-green); /* Button background color */
+    color: var(--white-text);             /* Text color for the button */
+    border: none;                         /* No border */
+    border-radius: 20px;                  /* Pill shape */
+    padding: 10px 20px;                   /* Padding to adjust button size */
+    cursor: pointer;                      /* Cursor changes to pointer to indicate it's clickable */
+    text-align: center;                   /* Center the text inside the button */
+    display: inline-block;                /* Allows the button to size according to its content */
+    margin: 0 auto;                       /* Center the button horizontally if needed */
+    width: auto;                          /* Width according to content size */
+}
+
+/* Footer styles */
+
+footer {
+    position: relative; /* Essential for containing absolutely positioned children */
+    background-color: var(--kaki-green);
+    color: var(--white-text);
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 12px; /* Smaller font size for footer content */
+    width: 100%; /* Ensures footer takes full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically aligns the footer content */
+    box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+.footer-container {
+    width: 100%; /* Ensure the container takes full width of the footer */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+.social-links {
+    position: absolute;
+    bottom: 10px; /* Position from the bottom of the footer */
+    right: 20px; /* Position from the right of the footer */
+    display: flex;
+    gap: 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Ensuring other elements are properly aligned and sized */
+.footer-links, .footer-contact, .footer-legal {
+    text-align: left;
+    padding: 5px; /* Adjust padding for visual balance */
+}
+
+.footer-links ul, .footer-legal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-legal li {
+    padding: 2px 0; /* Reduced vertical spacing */
+}
+
+.footer-copy {
+    text-align: center;
+    width: 100%; /* Full width to center the text appropriately */
+    position: absolute;
+    bottom: 0; /* Align at the bottom */
+    left: 0; /* Align to the left */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        position: absolute; /* Absolute position on small screens */
+        bottom: 10px; /* Position from the bottom of the footer */
+        right: 50%; /* Position in the middle of the footer */
+        transform: translateX(50%); /* Center horizontally */
+        display: flex;
+        gap: 10px;
+    }
+}

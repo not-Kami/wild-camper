@@ -1,0 +1,47 @@
+.item-card {
+    flex: 0 0 auto; /* Do not grow, do not shrink, basis is auto */
+    width: calc(100% / 3 - 40px); /* Adjust width to show 3 cards per view, minus gap */
+    scroll-snap-align: start;  /* Ensures snapping aligns to the start of each card */
+    padding: 10px;  /* Padding inside each card */
+    background-color: #ffffff;  /* Card background color */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);  /* Adds shadow for depth */
+    border-radius: 8px;  /* Rounded corners */
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;  /* Center-align items */
+    text-align: center;  /* Center-align text */
+}
+
+.item-card img {
+    width: 100%;  /* Full width of the card */
+    height: auto;  /* Maintain aspect ratio */
+    border-top-left-radius: 8px;  /* Rounded top corners */
+    border-top-right-radius: 8px;  /* Rounded top corners */
+}
+
+.item-card h3 {
+    margin: 10px 0 5px;  /* Space above and below the title */
+    color: #333;  /* Dark color for text */
+}
+
+.item-card p {
+    color: red;  /* Lighter text color */
+    font-size: 14px;  /* Smaller font size */
+}
+
+.item-card .learn-more {
+    background-color: #46512E;  /* Theme color for buttons */
+    color: white;  /* White text */
+    text-decoration: none;  /* No underline */
+    padding: 8px 16px;  /* Padding inside button */
+    margin-top: 10px;  /* Space above the button */
+    border-radius: 20px;  /* Fully rounded edges */
+    transition: background-color 0.3s;  /* Smooth transition for hover */
+}
+
+.item-card .learn-more:hover {
+    background-color: #333;  /* Darken button on hover */
+}
+
+
+
