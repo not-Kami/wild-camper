@@ -72,6 +72,7 @@ main {
     width: 100%;
 }
 
+
 .hero-content {
     text-align: right;
     width: 100%; /* Sets the width to 100% */
@@ -99,19 +100,12 @@ main {
         justify-content: center; /* Center content on smaller screens */
         padding-right: 0; /* Remove right padding on small screens */
     }
-
+    
     .hero-content {
         text-align: center; /* Center text on smaller screens */
         max-width: 80%; /* Wider content area on smaller screens */
     }
 }
-
-h2 {
-    font-family: var(--font-secondary); /* Only H2 uses Yellowtail */
-    font-size: var(--font-size-h2);
-    color: var(--light-grey);
-}
-
 
 .carousel {
     display: flex;
@@ -252,7 +246,7 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-
+    
     .social-links {
         position: absolute; /* Absolute position on small screens */
         bottom: 10px; /* Position from the bottom of the footer */
@@ -261,4 +255,70 @@ footer {
         display: flex;
         gap: 10px;
     }
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-wrapper.no-transition {
+    transition: none; /* Disable transition for instant jump */
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.item-card {
+    min-width: 300px; /* Adjust this value based on your design */
+    background-color: var(--second-bg-color);
+    color: var(--white-text);
+    border-radius: 10px 0 0 0;
+    margin: var(--spacing-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white-text);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
 }

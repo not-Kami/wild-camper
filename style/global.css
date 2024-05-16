@@ -34,3 +34,29 @@
     --spacing-xlarge: 48px;
 }
 
+p {
+    font-size: var(--font-size-paragraph);
+    color: var(--white-text);
+}
+
+h1 {
+    font-family: var(--font-primary); /* Only H1 uses Yellowtail */
+    font-size: var(--font-size-h1);
+    color: var(--white-text);
+}
+h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-h2);
+    color: var(--light-grey);
+}
+h3 {
+    font-family: var(--font-primary); 
+    font-size: var(--font-size-h3);
+    color: var(--accent-brown);
+}
+h4 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-h4);
+    color: var(--light-grey);
+}
+

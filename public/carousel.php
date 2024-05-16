@@ -1,140 +1,148 @@
-
-
-    <style>
-        .carousel {
-            display: flex;
-            overflow-x: scroll;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .item-card {
-            flex: 0 0 auto;
-            width: calc(100% / 3); /* Adjusts the width to show 3 cards */
-            scroll-snap-align: start;
-            padding: 0 10px;
-        }
-    </style>
-
-    <div class="carousel">
+<div class="carousel">
+    <div class="carousel-wrapper">
         <div class="item-card">
-            <img src="img/dodge_ram.png" alt="Image 1">
-            <h3>Title 1</h3>
-            <p>Description 1</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Dodge Ram</h3>
+            <img src="img/dodge_ram.png" alt="Dodge Ram">
+            <p>Starting at $400 a week</p>
+            <button class="button">Learn More</button>
         </div>
         <div class="item-card">
-            <img src="img/jeep_wrangler.png" alt="Image 2">
-            <h3>Title 2</h3>
-            <p>Description 2</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Jeep Wrangler</h3>
+            <img src="img/jeep_wrangler.png" alt="Jeep Wrangler">
+            <p>Starting at $450 a week</p>
+            <button class="button">Learn More</button>
         </div>
         <div class="item-card">
-            <img src="img/land_rover_discovery.png" alt="Image 3">
-            <h3>Title 3</h3>
-            <p>Description 3</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Land Rover Discovery</h3>
+            <img src="img/land_rover_discovery.png" alt="Land Rover Discovery">
+            <p>Starting at $500 a week</p>
+            <button class="button">Learn More</button>
         </div>
         <div class="item-card">
-            <img src="img/mercedes_viano.png" alt="Image 1">
-            <h3>Title 1</h3>
-            <p>Description 1</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Mercedes Viano</h3>
+            <img src="img/mercedes_viano.png" alt="Mercedes Viano">
+            <p>Starting at $550 a week</p>
+            <button class="button">Learn More</button>
         </div>
         <div class="item-card">
-            <img src="img/nissan_patrol.png" alt="Image 2">
-            <h3>Title 2</h3>
-            <p>Description 2</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Nissan Patrol</h3>
+            <img src="img/nissan_patrol.png" alt="Nissan Patrol">
+            <p>Starting at $600 a week</p>
+            <button class="button">Learn More</button>
         </div>
         <div class="item-card">
-            <img src="img/range_rover.png" alt="Image 3">
-            <h3>Title 3</h3>
-            <p>Description 3</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Range Rover</h3>
+            <img src="img/range_rover.png" alt="Range Rover">
+            <p>Starting at $650 a week</p>
+            <button class="button">Learn More</button>
         </div>
         <div class="item-card">
-            <img src="img/toyota-hilux.png" alt="Image 1">
-            <h3>Title 1</h3>
-            <p>Description 1</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Toyota Hilux</h3>
+            <img src="img/toyota_hilux.png" alt="Toyota Hilux">
+            <p>Starting at $700 a week</p>
+            <button class="button">Learn More</button>
         </div>
         <div class="item-card">
-            <img src="img/volov.png" alt="Image 2">
-            <h3>Title 2</h3>
-            <p>Description 2</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Volvo XC90</h3>
+            <img src="img/volvo_xc90.png" alt="Volvo XC 90">
+            <p>Starting at $750 a week</p>
+            <button class="button">Learn More</button>
         </div>
         <div class="item-card">
-            <img src="img/dodge_ram.png" alt="Image 3">
-            <h3>Title 3</h3>
-            <p>Description 3</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <h3>Volkswagen Caravelle</h3>
+            <img src="img/vw_caravelle.png" alt="Volkswagen Caravelle">
+            <p>Starting at $800 a week</p>
+            <button class="button">Learn More</button>
         </div>
     </div>
+</div>
 
-    <script>
-        const carousel = document.querySelector('.carousel');
-        let currentIndex = 0;
-        let isDragging = false;
-        let startX, scrollLeft;
 
-        function showImage(index) {
-            const images = carousel.querySelectorAll('img');
-            images.forEach((image, i) => {
-                if (i === index) {
-                    image.style.display = 'block';
-                } else {
-                    image.style.display = 'none';
-                }
-            });
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel');
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    const items = document.querySelectorAll('.item-card');
+    const prevButton = document.createElement('button');
+    const nextButton = document.createElement('button');
+
+    prevButton.classList.add('carousel-button', 'left');
+    nextButton.classList.add('carousel-button', 'right');
+
+    prevButton.innerHTML = '&#9664;'; // Left arrow
+    nextButton.innerHTML = '&#9654;'; // Right arrow
+
+    carousel.appendChild(prevButton);
+    carousel.appendChild(nextButton);
+
+    let index = 1;
+
+    // Clone first and last items
+    const firstClone = items[0].cloneNode(true);
+    const lastClone = items[items.length - 1].cloneNode(true);
+
+    // Add classes for identification
+    firstClone.classList.add('clone');
+    lastClone.classList.add('clone');
+
+    // Append clones to the wrapper
+    carouselWrapper.appendChild(firstClone);
+    carouselWrapper.insertBefore(lastClone, items[0]);
+
+    // Update the items NodeList after cloning
+    const updatedItems = document.querySelectorAll('.item-card');
+
+    function updateCarousel() {
+        const itemWidth = updatedItems[0].offsetWidth;
+        carouselWrapper.style.transform = `translateX(${-index * itemWidth}px)`;
+    }
+
+    function jumpToEnd() {
+        const itemWidth = updatedItems[0].offsetWidth;
+        carouselWrapper.classList.add('no-transition');
+        index = updatedItems.length - 2;
+        carouselWrapper.style.transform = `translateX(${-index * itemWidth}px)`;
+        setTimeout(() => {
+            carouselWrapper.classList.remove('no-transition');
+        }, 50);
+    }
+
+    function jumpToStart() {
+        const itemWidth = updatedItems[0].offsetWidth;
+        carouselWrapper.classList.add('no-transition');
+        index = 1;
+        carouselWrapper.style.transform = `translateX(${-index * itemWidth}px)`;
+        setTimeout(() => {
+            carouselWrapper.classList.remove('no-transition');
+        }, 50);
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (index > 0) {
+            index--;
+            updateCarousel();
         }
 
-        function moveImage(e) {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX || e.touches[0].pageX;
-            const walk = (x - startX) * 3; //scroll-fast
-            carousel.scrollLeft = scrollLeft - walk;
-            let index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
-            if (index >= carousel.querySelectorAll('img').length) {
-                index = 0;
-                carousel.scrollLeft = 0;
-            } else if (index < 0) {
-                index = carousel.querySelectorAll('img').length - 1;
-                carousel.scrollLeft = carousel.offsetWidth * index;
-            }
-            currentIndex = index;
-            showImage(currentIndex);
+        if (index === 0) {
+            setTimeout(jumpToEnd, 300);
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (index < updatedItems.length - 1) {
+            index++;
+            updateCarousel();
         }
 
-        carousel.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            carousel.style.cursor = 'grabbing';
-            startX = e.pageX;
-            scrollLeft = carousel.scrollLeft;
-        });
+        if (index === updatedItems.length - 1) {
+            setTimeout(jumpToStart, 300);
+        }
+    });
 
-        carousel.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].pageX;
-            scrollLeft = carousel.scrollLeft;
-        });
+    window.addEventListener('resize', updateCarousel);
 
-        carousel.addEventListener('mouseup', () => {
-            isDragging = false;
-            carousel.style.cursor = 'grab';
-        });
+    // Initialize carousel position
+    updateCarousel();
+});
 
-        carousel.addEventListener('mouseleave', () => {
-            isDragging = false;
-        });
-
-        carousel.addEventListener('touchend', () => {
-            isDragging = false;
-        });
-
-        carousel.addEventListener('mousemove', moveImage);
-        carousel.addEventListener('touchmove', moveImage);
-    </script>
+</script>
