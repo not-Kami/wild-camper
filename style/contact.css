@@ -1,0 +1,50 @@
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centers content vertically */
+    padding: var(--spacing-large);
+    background-color: var(--second-bg-color);
+    color: var(--white-text);
+}
+
+.contact-info, 
+.contact-form {
+    flex-basis: 50%; /* Each takes up 50% of the flex container */
+    max-width: 50%; /* Ensures that neither section exceeds half of the container */
+    padding: var(--spacing-large); /* Adds padding within each section */
+}
+
+.form-group {
+    margin-bottom: var(--spacing-medium);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-small);
+    background-color: var(--white-text);
+    border: 1px solid var(--light-grey);
+    color: var(--second-bg-color);
+    border-radius: 10px; /* Rounded corners */
+}
+
+textarea {
+    height: 150px; /* Sets a fixed height for text area */
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        min-height: auto;
+        height: auto;
+    }
+    
+    .contact-info, 
+    .contact-form {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}

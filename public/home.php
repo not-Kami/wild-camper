@@ -1,5 +1,5 @@
 <?php
-include 'hero.php';
-include 'carousel.php';
-include 'contact.php';
+foreach($layout['home'] as $component) {
+    include 'components/' . $component . '.php';
+}
 ?>

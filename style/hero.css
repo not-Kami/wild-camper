@@ -1,0 +1,43 @@
+
+.hero {
+    background-image: url('../img/hero_land_rover.png');
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    color: var(--white-text);
+    width: 100%;
+}
+
+.hero-content {
+    text-align: right;
+    width: 100%; /* Sets the width to 100% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-content h1,
+.hero-content p {
+    margin: var(--spacing-medium) var(--spacing-xlarge);
+}
+
+.hero-content button {
+    display: block;
+    width: auto;
+    margin: var(--spacing-medium) auto 0;
+    padding: 10px 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        justify-content: center; /* Center content on smaller screens */
+        padding-right: 0; /* Remove right padding on small screens */
+    }
+
+    .hero-content {
+        text-align: center; /* Center text on smaller screens */
+        max-width: 80%; /* Wider content area on smaller screens */
+    }
+}
