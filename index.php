@@ -3,7 +3,7 @@
 $page = 'home';
 
 if(isset($_GET['page'])) {
-    $filename = 'pages/' . $_GET['page'] . '.php';
+    $filename = 'app/' . $_GET['page'] . '.php';
     if(file_exists($filename)) {
         $page = $_GET['page'];
     } else {
@@ -11,6 +11,6 @@ if(isset($_GET['page'])) {
     }
 }
 
-include 'public/components/skeleton.php';
+include 'app/components/skeleton.php';
 
 ?>

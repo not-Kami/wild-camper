@@ -126,6 +126,7 @@ h2 {
     display: inline-block;                /* Allows the button to size according to its content */
     margin: 0 auto;                       /* Center the button horizontally if needed */
     width: auto;                          /* Width according to content size */
+    text-decoration: none;
 }
 
 /* Footer styles */
