@@ -19,7 +19,7 @@
 
     /* Font Sizes */
     --font-size-paragraph: 14px; /* Standard text size */
-    --font-size-h1: 36px;        /* For main titles */
+    --font-size-h1: 48px;        /* For main titles */
     --font-size-h2: 32px;        /* For secondary titles, Yellowtail */
     --font-size-h3: 28px;
     --font-size-h4: 24px;
@@ -106,11 +106,27 @@ main {
     flex-direction: column; /* Direction de flux du contenu */
 }
 
+h1 {
+    font-size: var(--font-size-h1); !important;
+    color: var(--kaki-green);
+    font-family: var(--font-secondary);
+}
+
 /* Overall text styles */
 h2 {
-    font-family: var(--font-secondary); /* Only H2 uses Yellowtail */
+    font-family: var(--font-primary); 
     font-size: var(--font-size-h2);
     color: var(--light-grey);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    color: var(--kaki-green);
+}
+h4 {
+    font-size: var(--font-size-h4);
+    color: var(--white-text);
+    text-decoration: underline;
 }
 
 /* Button general style - applied to all buttons */
