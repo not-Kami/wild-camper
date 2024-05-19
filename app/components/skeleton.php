@@ -45,9 +45,9 @@
         </ul>
     </nav>
     <!-- svg de user -->
-    <span class="material-symbols-outlined ">
-    person
-    </span>
+    <div class="user-profile">
+        <span class="material-symbols-outlined">person</span>
+    </div>
     <!-- <?php
     if (!isset($_SESSION['user'])) {
         echo '<a href="index.php?page=login" class="button">Login</a>';

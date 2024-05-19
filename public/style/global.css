@@ -44,6 +44,24 @@
   'opsz' 48
 }
 
+.material-symbols-outlined {
+    font-size: 24px; /* Adjust the size of the icon */
+    color: var(--accent-brown); /* Color of the icon */
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    background-color: var(--light-grey); /* Background color for better visibility */
+    border-radius: 50%; /* Make it a circle */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position it absolutely within its relative parent */
+    right: 16px; /* 16px away from the right side */
+}
+
+
     /* Global styles */
 
 html, body {
@@ -79,7 +97,7 @@ header {
 .logo {
     position: absolute;
     left: 20px;
-    height: 80%; /* Utiliser 100% de la hauteur du header */
+    height: 72%; /* Utiliser 100% de la hauteur du header */
     width: auto; /* Maintenir les proportions du logo */
     transform: scaleX(-1);
 }
