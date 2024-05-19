@@ -1,0 +1,4 @@
+
+
+GRANT ALL PRIVILEGES ON wildcamper.* TO 'admin'@'localhost' IDENTIFIED BY 'F0aLKtE*l@NYLKzW';
+FLUSH PRIVILEGES;

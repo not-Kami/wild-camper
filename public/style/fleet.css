@@ -1,0 +1,146 @@
+.vehicle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.vehicle-card {
+    position: relative;
+    border-radius: 8px 0 0 0;
+    overflow: visible; /* Permettre au contenu de dépasser la carte */
+    margin: 16px;
+    width: 300px;
+    text-align: center;
+    background-color: var(--second-bg-color); /* Ajustez cette variable selon vos besoins */
+    padding-bottom: 60px; /* Espace pour le bouton */
+}
+
+.vehicle-card h3 {
+    border-radius: 8px 0 0 0;
+    margin: 0;
+    color: var(--kaki-green);
+    background-color: var(--light-grey);
+    width: 100%;
+    padding: var(--spacing-small) 0;
+
+}
+.favorite-heart {
+    position: absolute;
+    top: var(--spacing-xlarge); /* Ajustez cette valeur pour le positionner correctement */
+    right: var(--spacing-medium); /* Ajustez cette valeur pour le positionner correctement */
+    background-color: white;
+    color: grey;
+    border-radius: 50%;
+    width: 32px; /* Ajustez la taille du cercle */
+    height: 32px; /* Ajustez la taille du cercle */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    cursor: pointer;
+    font-size: 16px; /* Ajustez la taille du cœur */
+}
+
+.favorite-heart.favorite {
+    color: red; /* Changer la couleur du cœur lorsqu'il est favori */
+}
+
+
+.vehicle-image {
+    width: 100%;
+    height: 200px; /* Ajustez la hauteur selon les besoins */
+    background-size: cover;
+    background-position: center;
+}
+
+.description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4; /* Limite à 4 lignes */
+    height: calc(1.2em * 4); /* Ajuste la hauteur selon la taille de la police et le nombre de lignes */
+    padding: 16px;
+    background-color: var(--second-bg-color);
+    font-size: var(--font-size-paragraph);
+    margin-bottom: 60px; /* Espace pour le bouton */
+}
+
+.vehicle-card p {
+    color: var(--white-text);
+    margin: 0 0 8px 0;
+}
+
+.price {
+    position: absolute;
+    bottom: 40px; /* Ajustez cette valeur pour placer le prix plus bas */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--second-bg-color);
+    padding: 10px;
+    color: var(--white-text);
+    border-radius: 8px;
+    font-size: var(--font-size-paragraph);
+}
+
+.button-container {
+    position: absolute;
+    bottom: -20px; /* Ajustez cette valeur pour déplacer le bouton en dehors de la carte */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.button.learn-more {
+    background-color: var(--kaki-green); /* Button background color */
+    color: var(--white-text);             /* Text color for the button */
+    border: none;                         /* No border */
+    border-radius: 20px;                  /* Pill shape */
+    padding: 10px 20px;                   /* Padding to adjust button size */
+    cursor: pointer;                      /* Cursor changes to pointer to indicate it's clickable */
+    text-align: center;                   /* Center the text inside the button */
+    display: inline-block;                /* Allows the button to size according to its content */
+    margin: 0 auto;                       /* Center the button horizontally if needed */
+    width: auto;                          /* Width according to content size */
+    text-decoration: none;                /* No text decoration */
+    z-index: 10;                          /* Ensure the button is on top */
+}
+
+/* Media queries pour la réactivité */
+@media (max-width: 1200px) {
+    .vehicle-card {
+        width: 180px; /* Ajustez la largeur pour les écrans moyens */
+        padding-bottom: 45px; /* Espace pour le bouton */
+    }
+
+    .vehicle-image {
+        height: 150px; /* Ajustez la hauteur pour les écrans moyens */
+    }
+
+    .button-container {
+        bottom: -15px; /* Ajustez cette valeur pour les écrans moyens */
+    }
+
+    .price {
+        bottom: 30px; /* Ajustez cette valeur pour placer le prix plus bas sur les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    .vehicle-card {
+        width: 140px; /* Ajustez la largeur pour les petits écrans */
+        padding-bottom: 35px; /* Espace pour le bouton */
+    }
+
+    .vehicle-image {
+        height: 100px; /* Ajustez la hauteur pour les petits écrans */
+    }
+
+    .button-container {
+        bottom: -10px; /* Ajustez cette valeur pour les petits écrans */
+    }
+
+    .price {
+        bottom: 20px; /* Ajustez cette valeur pour placer le prix plus bas sur les petits écrans */
+    }
+}

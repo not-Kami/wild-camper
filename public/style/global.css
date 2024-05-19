@@ -21,8 +21,8 @@
     --font-size-paragraph: 14px; /* Standard text size */
     --font-size-h1: 48px;        /* For main titles */
     --font-size-h2: 32px;        /* For secondary titles, Yellowtail */
-    --font-size-h3: 28px;
-    --font-size-h4: 24px;
+    --font-size-h3: 24px;
+    --font-size-h4: 16px;
     --font-size-nav: 18px;       /* Navigation links */
     --font-size-btn: 18px;       /* Buttons text */
     
@@ -33,7 +33,18 @@
     --spacing-large: 32px;
     --spacing-xlarge: 48px;
 }
-/* Global styles */
+
+/* Google Icons */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' -25,
+  'opsz' 48
+}
+
+    /* Global styles */
 
 html, body {
     height: 100%;
@@ -195,6 +206,16 @@ footer {
 
 .footer-links li, .footer-legal li {
     padding: 2px 0; /* Reduced vertical spacing */
+}
+
+.footer-links a, .footer-legal a {
+    color: var(--white-text);
+    text-decoration: none;
+}
+
+.footer-links a, .footer-legal a :visited {
+    color: var(--white-text);
+    text-decoration: none;
 }
 
 .footer-copy {
