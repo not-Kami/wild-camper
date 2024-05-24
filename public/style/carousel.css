@@ -1,6 +1,7 @@
 .carousel-section {
     margin-top: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 148px;
+    padding-bottom: 148px;
     display: flex;
     justify-content: center;
 }
@@ -49,19 +50,6 @@
     background-position: center;  /* Centrez l'image */
     border-radius: 8px 8px 0 0; /* Bords arrondis en haut */
 }
-
-/* Supprimer ou commenter les styles des flèches de navigation */
-/* .splide__arrow {
-    z-index: 1;
-}
-
-.splide__arrow--prev {
-    left: -1rem; 
-}
-
-.splide__arrow--next {
-    right: -1rem; 
-} */
 
 /* Media queries pour la réactivité */
 @media (max-width: 1200px) {

@@ -127,6 +127,41 @@ nav ul li a {
     padding: 10px;
 }
 
+.nav-link {
+    color: var(--white-text);
+    position: relative;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: var(--white-text);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: var(--white-text);
+    height: 4px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.nav-link.active:hover::before {
+    left: 0;
+    right: 0;
+}
+
+  
 /* Main content styles */
 
 main {

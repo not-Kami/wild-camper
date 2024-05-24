@@ -26,6 +26,7 @@ try {
         </div>
     </div>
 </section>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         new Splide('#splide', {
@@ -33,7 +34,7 @@ try {
             perPage: 3,
             perMove: 1,
             autoplay: true,
-            interval: 3000, // Intervalle de l'autoplay en millisecondes
+            interval: 02000, // Intervalle de l'autoplay en millisecondes
             gap: '1rem',  // Ajustez l'espace entre les cartes
             padding: {
                 right: '1.5rem',  // Ajustez l'espace de remplissage à droite
