@@ -27,22 +27,23 @@ try {
 
 <h2>Liste des Véhicules</h2>
 <div class="vehicle-container">
-    <?php foreach ($vehicles as $vehicle): ?>
-        <?php $is_favorite = in_array($vehicle['id'], $favorites); ?>
-        <div class="vehicle-card">
-            <h3><?= htmlspecialchars($vehicle['name']) ?></h3>
-            <div class="vehicle-image" style="background-image: url('<?= htmlspecialchars($vehicle['image_path']) ?>');">
-                <span class="favorite-heart <?= $is_favorite ? 'favorite' : '' ?>" data-vehicle-id="<?= $vehicle['id'] ?>">&#10084;</span>
-            </div>
-            <div class="description">
-                <p><?= htmlspecialchars($vehicle['description']) ?></p>
-            </div>
-            <div class="price">Starting at <?= htmlspecialchars($vehicle['price_per_week']) ?>€ per week</div>
-            <div class="button-container">
-                <a href="#" class="button learn-more">Learn more</a>
-            </div>
+<?php foreach ($vehicles as $vehicle): ?>
+    <?php $is_favorite = in_array($vehicle['id'], $favorites); ?>
+    <div class="vehicle-card">
+        <h3><?= htmlspecialchars($vehicle['name']) ?></h3>
+        <div class="vehicle-image" style="background-image: url('<?= htmlspecialchars($vehicle['image_path']) ?>');">
+            <span class="favorite-heart <?= $is_favorite ? 'favorite' : '' ?>" data-vehicle-id="<?= $vehicle['id'] ?>">&#10084;</span>
         </div>
-    <?php endforeach; ?>
+        <div class="description">
+            <p><?= htmlspecialchars($vehicle['description']) ?></p>
+        </div>
+        <div class="price">Starting at <?= htmlspecialchars($vehicle['price_per_week']) ?>€ per week</div>
+        <div class="button-container">
+            <a href="index.php?page=detail&id=<?= htmlspecialchars($vehicle['id']) ?>" class="button learn-more">Learn more</a>
+        </div>
+    </div>
+<?php endforeach; ?>
+
 </div>
 
 <script>

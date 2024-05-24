@@ -1,9 +1,37 @@
+
 <?php
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['step3'] = $_POST;
     header('Location: confirmation.php');
+    exit;
+}
+
+if (!isset($_SESSION['step1']) || !isset($_SESSION['step2'])) {
+    header('Location: step1.php');
+    exit;
+}
+
+$step1 = $_SESSION['step1'];
+$step2 = $_SESSION['step2'];
+
+// Connexion à la base de données
+try {
+    $pdo = new PDO('mysql:host=localhost;dbname=wildcamper', 'admin', 'F0aLKtE*l@NYLKzW');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo 'Erreur de connexion : ' . $e->getMessage();
+    exit;
+}
+
+// Récupération des détails du véhicule
+$stmt = $pdo->prepare('SELECT * FROM fleet WHERE id = ?');
+$stmt->execute([$step1['vehicle']]);
+$vehicle = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$vehicle) {
+    echo "Véhicule non trouvé.";
     exit;
 }
 ?>
@@ -16,11 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Booking Step 3</title>
     <link rel="stylesheet" href="../../public/style/global.css">
     <link rel="stylesheet" href="../../public/style/booking.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <main class="booking-main">
+<main class="booking-main">
         <a href="step2.php" class="chevron-left"><span class="material-icons">arrow_back_ios</span></a>
         <div class="booking-container">
             <form action="step3.php" method="POST" onsubmit="return validateForm()">
@@ -85,5 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             return true;
         }
     </script>
+    <p class="footer-copy">© <?= date('Y'); ?> WildCampers. Tous droits réservés.</p>
 </body>
 </html>
+

@@ -15,7 +15,7 @@
         'catalog' => ['fleet', 'contact'],
         'booking' => ['booking/step1', 'contact'], 
         'contact' => ['contact'],
-        'detail' => ['vehicle', 'contact'],
+        'detail' => ['detail_vehicle', 'review','contact'],
     ];
 
     if (isset($layout[$page])) {
@@ -53,17 +53,6 @@
     <div class="user-profile">
         <span class="material-symbols-outlined">person</span>
     </div>
-    <!-- 
-    <?php
-    if (!isset($_SESSION['user'])) {
-        echo '<a href="index.php?page=login" class="button">Login</a>';
-    }
-    ?>
-    <?php   
-    if (isset($_SESSION['user'])) {
-        echo '<a href="index.php?page=logout" class="button">Logout</a>';
-    }
-    ?> -->
 </header>
 
 <main>
@@ -73,8 +62,6 @@
         foreach ($layout[$page] as $component) {
             include 'app/components/' . $component . '.php';
         }
-    } else if (file_exists('booking/' . basename($_SERVER['PHP_SELF']))) {
-        include 'booking/' . basename($_SERVER['PHP_SELF']);
     } else {
         // Inclure le composant 404 si la page n'est pas trouvée
         include 'app/components/404.php';

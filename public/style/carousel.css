@@ -7,65 +7,60 @@
 }
 
 .splide {
-    width: 80%; /* Ajustez selon les besoins pour centrer le carrousel */
+    width: 80%; /* Adjust as needed to center the carousel */
 }
 
 .splide__slide.item-card {
-    border-radius: 8px 0 0 0;  /* Bords arrondis */
     display: flex;
-    flex-direction: column;  /* Empilez les éléments verticalement */
-    align-items: center;  /* Alignez les éléments au centre */
-    text-align: center;  /* Centrez le texte */
-    margin: 16px;  /* Marge réduite */
-    box-sizing: border-box;  /* Assurez-vous que le padding et la bordure sont inclus dans la largeur */
-    width: 220px;  /* Largeur réduite pour les cartes plus petites */
-    padding: 10px;
-    transition: transform 0.3s ease;  /* Transition pour l'effet de survol */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-sizing: border-box;
+    width: 220px; /* Set fixed width for the cards */
+    transition: transform 0.3s ease;
+    width: calc(200px + 16px + 16px);
 }
 
 .splide__slide.item-card:hover {
-    transform: scale(1.05);  /* Effet de zoom sur le survol */
+    transform: scale(1.05); /* Zoom effect on hover */
 }
 
-.card-link {
-    text-decoration: none;  /* Enlever la décoration du texte pour le lien */
-    color: inherit;  /* Garder la couleur du texte héritée */
-    display: block;  /* Rendre le lien un bloc pour inclure toute la carte */
+.image {
+    width: 100%; /* Ensure the image div takes the full width of the parent */
+    height: 200px; /* Set a fixed height for the image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 8px 0 0;
 }
 
-.item-card h3 {
-    margin: 0;  /* Pas de marge */
-    color: var(--kaki-green);  /* Couleur du texte */
-    background-color: var(--light-grey);  /* Couleur de fond pour h3 */
+h3 {
+    margin: 0;
+    padding: 16px;
+    font-size: 18px;
+    color: var(--kaki-green);
+    background-color: var(--light-grey); /* Add background color if needed */
     width: 100%;
-    padding: 8px 0;
-    font-size: 18px; /* Ajuster la taille de la police si nécessaire */
 }
 
-.item-card .image {
-    position: relative; /* Pour positionner le bouton à l'intérieur */
-    width: 100%;
-    height: 200px;  /* Ajustez la hauteur selon les besoins */
-    background-size: cover;  /* Couvrez toute la carte */
-    background-position: center;  /* Centrez l'image */
-    border-radius: 8px 8px 0 0; /* Bords arrondis en haut */
-}
-
-/* Media queries pour la réactivité */
+/* Media queries for responsiveness */
 @media (max-width: 1200px) {
     .splide__slide.item-card {
-        width: 180px;  /* Ajustez la largeur pour les écrans moyens */
+        width: 180px; /* Adjust width for medium screens */
     }
-    .item-card .image {
-        height: 180px; /* Ajustez la hauteur pour les écrans moyens */
+    .image {
+        height: 180px; /* Adjust height for medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .splide__slide.item-card {
-        width: 140px;  /* Ajustez la largeur pour les petits écrans */
+        width: 140px; /* Adjust width for small screens */
     }
-    .item-card .image {
-        height: 140px; /* Ajustez la hauteur pour les petits écrans */
+    .image {
+        height: 140px; /* Adjust height for small screens */
     }
 }

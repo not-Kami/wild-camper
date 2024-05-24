@@ -1,0 +1,27 @@
+.vehicle-details {
+    padding: var(--spacing-large);
+    background-color: var(--second-bg-color);
+    color: var(--white-text);
+    border-radius: var(--spacing-small);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: var(--spacing-large) auto;
+    max-width: 1200px;
+}
+
+.vehicle-details img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--spacing-small);
+}
+
+.vehicle-details h1,
+.vehicle-details h2 {
+    font-family: var(--font-secondary);
+    color: var(--accent-brown);
+}
+
+.review {
+    border-bottom: 1px solid var(--light-grey);
+    margin-bottom: var(--spacing-medium);
+    padding-bottom: var(--spacing-medium);
+}

@@ -20,6 +20,7 @@ try {
                     <li class="splide__slide item-card">
                         <div class="image" style="background-image: url('<?= htmlspecialchars($vehicle['image_path']) ?>');"></div>
                         <h3><?= htmlspecialchars($vehicle['name']) ?></h3>
+                        <a href="index.php?page=detail&id=<?= htmlspecialchars($vehicle['id']) ?>" class="learn-more-btn">Learn More</a>
                     </li>
                 <?php endforeach; ?>
             </ul>
