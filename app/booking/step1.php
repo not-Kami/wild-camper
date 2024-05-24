@@ -30,15 +30,14 @@ $vehicles = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h2>Select Your Vehicle</h2>
             <p>Please choose your preferred vehicle for the adventure:</p>
             <form action="step1.php" method="POST">
-                <select name="vehicle" required>
-                    <option value="">Select a vehicle</option>
-                    <?php foreach ($vehicles as $vehicle): ?>
-                        <option value="<?= htmlspecialchars($vehicle['id']) ?>" <?= $vehicle['available'] == 0 ? 'disabled' : '' ?>>
-                            <?= htmlspecialchars($vehicle['name']) ?> 
-                            <?= $vehicle['available'] == 0 ? ' - Not Available' : '' ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
+                <?php foreach ($vehicles as $vehicle): ?>
+                    <div class="vehicle-card">
+                    <img src="/<?= htmlspecialchars($vehicle['image_path']) ?>" alt="<?= htmlspecialchars($vehicle['name']) ?>">
+                        <h3><?= htmlspecialchars($vehicle['name']) ?></h3>
+                        <input type="radio" name="vehicle" value="<?= htmlspecialchars($vehicle['id']) ?>" <?= $vehicle['available'] == 0 ? 'disabled' : '' ?>>
+                        <label><?= $vehicle['available'] == 0 ? 'Not Available' : 'Select' ?></label>
+                    </div>
+                <?php endforeach; ?>
                 <button type="submit">Next</button>
             </form>
         </div>

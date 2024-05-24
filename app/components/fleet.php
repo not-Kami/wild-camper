@@ -24,7 +24,6 @@ try {
     exit();
 }
 ?>
-
 <h2>Liste des Véhicules</h2>
 <div class="vehicle-container">
 <?php foreach ($vehicles as $vehicle): ?>
@@ -43,7 +42,6 @@ try {
         </div>
     </div>
 <?php endforeach; ?>
-
 </div>
 
 <script>

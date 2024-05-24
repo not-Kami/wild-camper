@@ -1,4 +1,4 @@
-/* booking.css */
+/* General Styles */
 
 body {
     font-family: var(--font-primary);
@@ -24,7 +24,7 @@ body {
 
 .booking-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: var(--kaki-green);
@@ -35,35 +35,68 @@ body {
     max-width: 600px;
 }
 
-.counter-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: var(--spacing-medium);
-}
-
-.counter {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-small);
-}
-
-.counter input {
-    width: 40px;
-    text-align: center;
-    border: 1px solid var(--accent-brown);
-    border-radius: 4px;
-    padding: var(--spacing-small);
-    font-size: var(--font-size-paragraph);
-}
-
-.counter button {
-    background: none;
+.booking-form button[type="submit"] {
+    background-color: var(--white-text);
+    color: var(--kaki-green);
     border: none;
-    color: var(--white-text);
+    border-radius: 20px;
+    padding: var(--spacing-small) var(--spacing-medium);
     cursor: pointer;
+    font-size: var(--font-size-btn);
+    transition: background-color 0.3s ease;
+    margin-top: var(--spacing-large);
 }
+
+.booking-form button[type="submit"]:hover {
+    background-color: var(--accent-brown);
+    color: var(--white-text);
+}
+
+.footer-copy {
+    color: var(--white-text);
+}
+
+@media (max-width: 768px) {
+    .booking-container {
+        padding: var(--spacing-medium);
+        width: 100%;
+    }
+}
+
+/* Step 1 Styles */
+
+.vehicle-card {
+    position: relative;
+    padding: 0;
+    margin: 10px;
+    width: 200px;
+    overflow: hidden;
+    border: none;
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vehicle-card label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #4B5320; /* Green-Khaki color */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vehicle-card label:hover {
+    background-color: #354418; /* Darker Green-Khaki color */
+}
+
+/* Step 2 Styles */
 
 .switch {
     position: relative;
@@ -110,30 +143,38 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+/* Step 3 Styles */
 
-.booking-form button[type="submit"] {
-    background-color: var(--white-text);
-    color: var(--kaki-green);
+.counter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: var(--spacing-medium);
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+}
+
+.counter input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid var(--accent-brown);
+    border-radius: 4px;
+    padding: var(--spacing-small);
+    font-size: var(--font-size-paragraph);
+}
+
+.counter button {
+    background: none;
     border: none;
-    border-radius: 20px;
-    padding: var(--spacing-small) var(--spacing-medium);
+    color: var(--white-text);
     cursor: pointer;
-    font-size: var(--font-size-btn);
-    transition: background-color 0.3s ease;
-    margin-top: var(--spacing-large);
 }
 
-.booking-form button[type="submit"]:hover {
-    background-color: var(--accent-brown);
-    color: var(--white-text);
-}
-s
-@media (max-width: 768px) {
-    .booking-container {
-        padding: var(--spacing-medium);
-        width: 100%;
-    }
-}
-.footer-copy{
-    color: var(--white-text);
-}
+/* Confirmation Styles */
+
+/* Additional confirmation-specific styles can go here if needed */
