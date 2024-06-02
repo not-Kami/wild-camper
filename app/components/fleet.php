@@ -24,7 +24,7 @@ try {
     exit();
 }
 ?>
-<h2>Liste des Véhicules</h2>
+<h2>Choose your adventure partner</h2>
 <div class="vehicle-container">
 <?php foreach ($vehicles as $vehicle): ?>
     <?php $is_favorite = in_array($vehicle['id'], $favorites); ?>
@@ -37,11 +37,16 @@ try {
             <p><?= htmlspecialchars($vehicle['description']) ?></p>
         </div>
         <div class="price">Starting at <?= htmlspecialchars($vehicle['price_per_week']) ?>€ per week</div>
+        <div></div>
         <div class="button-container">
             <a href="index.php?page=detail&id=<?= htmlspecialchars($vehicle['id']) ?>" class="button learn-more">Learn more</a>
         </div>
     </div>
 <?php endforeach; ?>
+</div>
+
+<div class="cta">
+    <p>Ready to hit the road ? <span><a href="index.php?page=booking">book your adventure now</a></span></p>
 </div>
 
 <script>

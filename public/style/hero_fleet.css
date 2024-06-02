@@ -1,0 +1,58 @@
+/* Styles pour le conteneur héros */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-bg-color); /* Mise à jour de la couleur */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60%; /* Le conteneur occupe 60% de la largeur */
+    height: 35vh; /* Le conteneur occupe 35% de la hauteur de la vue */
+    margin: 50px auto; /* Ajouter un margin-top pour créer un espace avec le nav */
+    padding: var(--spacing-large); /* Ajouter du padding pour éviter que le contenu touche les bords */
+    box-sizing: border-box; /* Assurez-vous que le padding est inclus dans la largeur totale */
+    position: relative; /* Ajouter une position relative pour positionner l'image */
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Placer l'image à droite */
+    align-items: flex-end; /* Placer l'image en bas */
+    overflow: hidden; /* Assurez-vous que l'image ne dépasse pas */
+    position: absolute; /* Ajouter une position absolue pour positionner l'image */
+    bottom: 0; /* Positionner l'image en bas */
+    left: 0; /* Positionner l'image à gauche */
+}
+
+.hero-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    object-fit: contain; /* Assurez-vous que l'image est contenue dans le div */
+}
+
+.hero-text {
+    left: 45%;
+    flex: 1;
+    max-width: 50%;
+    padding: var(--spacing-large);
+    color: var(--white-text);
+    position: relative; /* Add a relative position to position the text */
+}
+
+.hero-text h1 {
+    font-size: var(--font-size-h1);
+    color: var(--white-text);
+}
+
+.hero-text p, .hero-text ul {
+    font-size: var(--font-size-paragraph);
+    color: var(--white-text);
+    margin-bottom: var(--spacing-medium);
+}
+
+.hero-text ul {
+    list-style-type: disc;
+    padding-left: var(--spacing-medium);
+}

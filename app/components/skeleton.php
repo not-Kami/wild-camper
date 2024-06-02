@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wild Campers - Your Ultimate Adventure Companion!</title>
+    <link rel="icon" type="image/x-icon" href="public/img/favicon.ico">
     <link rel="stylesheet" href="public/style/global.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -12,8 +13,7 @@
     $layout = [
         'home' => ['hero', 'carousel', 'contact'],
         'about' => ['introduction', 'contact'], 
-        'catalog' => ['fleet', 'contact'],
-        'booking' => ['booking/step1', 'contact'], 
+        'catalog' => ['hero_fleet','fleet', 'contact'], 
         'contact' => ['contact'],
         'detail' => ['detail_vehicle', 'review','contact'],
     ];
@@ -40,11 +40,11 @@
 
 <body>
 <header>
-    <img src="public/img/wild-camper-logo.svg" alt="Wild Camper Logo" class="logo">
+    <a href="index.php"><img src="public/img/wild-camper-logo.svg" alt="Wild Camper Logo" class="logo"></a>
     <nav>
         <ul>
             <li><a href="index.php?page=home" class="nav-link" id="nav-home">Home</a></li>
-            <li><a href="app/booking/step1.php" class="nav-link" id="nav-booking">Booking</a></li>
+            <li><a href="app/booking/booking.php" class="nav-link" id="nav-booking">Booking</a></li>
             <li><a href="index.php?page=catalog" class="nav-link" id="nav-catalog">Our fleet</a></li>
             <li><a href="index.php?page=about" class="nav-link" id="nav-about">About us</a></li>
         </ul>

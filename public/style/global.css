@@ -96,6 +96,7 @@ header {
 
 .logo {
     position: absolute;
+    top: 20px;
     left: 20px;
     height: 72%; /* Utiliser 100% de la hauteur du header */
     width: auto; /* Maintenir les proportions du logo */
@@ -171,7 +172,7 @@ main {
 }
 
 h1 {
-    font-size: var(--font-size-h1); !important;
+    font-size: var(--font-size-h1);
     color: var(--kaki-green);
     font-family: var(--font-secondary);
 }
@@ -196,7 +197,7 @@ h4 {
 /* Button general style - applied to all buttons */
 
 .button {
-    background-color: var(--kaki-green); /* Button background color */
+    background-color: var(--kaki-green) !important; /* Ensure the button has the kaki-green background color */
     color: var(--white-text);             /* Text color for the button */
     border: none;                         /* No border */
     border-radius: 20px;                  /* Pill shape */
@@ -208,7 +209,6 @@ h4 {
     width: auto;                          /* Width according to content size */
     text-decoration: none;
 }
-
 /* Footer styles */
 
 footer {
@@ -216,7 +216,7 @@ footer {
     background-color: var(--kaki-green);
     color: var(--white-text);
     padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 12px; /* Smaller font size for footer content */
+    font-size: --var(); /* Smaller font size for footer content */
     width: 100%; /* Ensures footer takes full width */
     display: flex;
     justify-content: space-between;

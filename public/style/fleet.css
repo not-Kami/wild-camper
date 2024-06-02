@@ -1,20 +1,19 @@
 .vehicle-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    grid-gap: 32px; /* Gap between grid items */
+    padding: var(--spacing-xlarge);
 }
 
 .vehicle-card {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    width: calc(33.333% - 20px); /* Trois cartes par rangée avec un espace de 20px entre elles */
-    margin: 10px; /* Espace autour de chaque carte */
     text-align: center;
     background-color: var(--second-bg-color);
-    padding-bottom: 60px; /* Espace pour le bouton */
-    height: 400px; /* Hauteur fixe */
-    box-sizing: border-box; /* Inclure le padding dans la largeur et la hauteur */
+    padding-bottom: 60px; /* Space for the button */
+    height: 400px; /* Fixed height */
+    box-sizing: border-box; /* Include padding in width and height */
 }
 
 .vehicle-card h3 {
@@ -101,6 +100,24 @@
     text-decoration: none;
     z-index: 10;
 }
+
+.cta{
+    color: var(--white-text);
+    text-align: center;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    z-index: 10;
+    font-size: var(--font-size-h2);
+    text-decoration: bold;
+}
+
+.cta a{
+    color: var(--kaki-green);
+    text-align: center;
+    text-decoration: none;
+}
+
 
 /* Media queries pour la réactivité */
 @media (max-width: 1200px) {

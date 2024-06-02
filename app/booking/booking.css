@@ -1,0 +1,296 @@
+:root {
+    /* Color Palette from Figma */
+    --kaki-green: #46512E;       /* Used for headers, footers, etc */
+    --second-bg-color: #1E1E1E;  /* Secondary background color */
+    --main-bg-color: #9E8B74;    /* Main background color */
+    --light-grey: #D9D9D9;       /* Used for lighter text or elements */
+    --accent-brown: #534534;     /* Accent color for buttons, links, etc */
+    --white-text: #EEEEEE;       /* Text color for dark backgrounds */
+
+    /* Typography */
+    --font-primary: 'Roboto', sans-serif; /* Primary font for text */
+    --font-secondary: 'Yellowtail', cursive; /* Secondary font for headers */
+
+    /* Font Sizes */
+    --font-size-paragraph: 14px; /* Standard text size */
+    --font-size-h1: 48px;        /* For main titles */
+    --font-size-h2: 32px;        /* For secondary titles, Yellowtail */
+    --font-size-h3: 24px;
+    --font-size-h4: 16px;
+    --font-size-nav: 18px;       /* Navigation links */
+    --font-size-btn: 18px;       /* Buttons text */
+    
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+    --spacing-xlarge: 48px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-text);
+}
+
+a:visited {
+    color: var(--white-text);
+}
+body {
+    font-family: var(--font-primary);
+    background-color: var(--second-bg-color); /* Mise à jour de la couleur du fond */
+    color: var(--white-text);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: 60vh;
+    background-color: var(--kaki-green);
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-xlarge); /* Padding inside container */
+    box-sizing: border-box;
+}
+
+a .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 48px; /* Utiliser 100% de la hauteur du header */
+    width: auto; /* Maintenir les proportions du logo */
+    transform: scaleX(-1);
+}
+
+.content {
+    width: 100%;
+}
+
+.footer {
+    background-color: var(--kaki-green);
+    text-align: center;
+    padding: var(--spacing-small);
+}
+
+.footer-copy {
+    margin: 0;
+    color: var(--white-text);
+}
+
+.chevron-left {
+    position: fixed;
+    top: 50%;
+    left: var(--spacing-medium);
+    transform: translateY(-50%);
+    color: var(--white-text);
+    font-size: var(--font-size-nav);
+    text-decoration: none;
+}
+
+.chevron-left:hover {
+    color: var(--accent-brown);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .chevron-left {
+        top: var(--spacing-medium);
+        transform: none;
+    }
+}
+
+/* Booking Form Styles */
+.booking-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-container {
+    width: 100%;
+    background-color: var(--kaki-green);
+    border-radius: 8px;
+    padding: var(--spacing-large);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small); /* Reduced gap between form elements */
+}
+
+.counter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure labels and inputs are evenly spaced */
+    gap: var(--spacing-small); /* Ajout d'un gap entre les éléments */
+}
+
+.counter-row label {
+    flex: 1;
+    font-size: var(--font-size-h4);
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.counter button {
+    background: none;
+    border: none;
+    color: var(--white-text);
+    cursor: pointer;
+    padding: 0; /* Remove padding for buttons */
+}
+
+.counter input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: none;
+    color: var(--white-text);
+    font-size: var(--font-size-h4);
+}
+
+.switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px; /* Réduction de la taille du slider */
+    height: 20px; /* Réduction de la taille du slider */
+    margin-left: var(--spacing-small); /* Réduction du margin-left */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; /* Réduction de la taille du cercle */
+    width: 14px; /* Réduction de la taille du cercle */
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--main-bg-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px); /* Translate to the end of the slider */
+}
+
+
+
+.date-picker-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small); /* Ajout d'un gap entre les éléments */
+}
+
+.date-picker-label {
+    font-size: var(--font-size-h4);
+}
+
+.date-picker-input {
+    padding: var(--spacing-small);
+    border-radius: 4px;
+    border: none;
+    font-size: var(--font-size-paragraph);
+}
+
+.vehicle-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-large); /* Ajout d'espace entre l'image et le formulaire */
+    margin-top: var(--spacing-large); /* Ajout d'espace au-dessus du conteneur */
+}
+
+.vehicle-image-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.vehicle-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 300px; /* Limite la hauteur maximale de l'image */
+    object-fit: cover; /* Assure que l'image est bien contenue dans les dimensions */
+}
+
+.vehicle-form-wrapper {
+    flex: 1;
+    max-width: 50%;
+}
+
+.vehicle-info {
+    padding: var(--spacing-small);
+    border-radius: 8px;
+    background-color: var(--main-bg-color);
+    color: var(--white-text);
+    text-align: left;
+    margin-bottom: var(--spacing-medium);
+}
+
+.vehicle-info h3 {
+    margin-top: var(--spacing-small);
+    font-size: var(--font-size-h3);
+}
+
+.vehicle-info p {
+    margin: var(--spacing-small) 0;
+    font-size: var(--font-size-paragraph);
+}
+
+
+.button {
+    background-color: var(--white-text); /* Button background color */
+    color: var(--kaki-green);             /* Text color for the button */
+    border: none;                         /* No border */
+    border-radius: 20px;                  /* Pill shape */
+    padding: 10px 20px;                   /* Padding to adjust button size */
+    cursor: pointer;                      /* Cursor changes to pointer to indicate it's clickable */
+    text-align: center;                   /* Center the text inside the button */
+    display: inline-block;                /* Allows the button to size according to its content */
+    margin: 0 auto;                       /* Center the button horizontally if needed */
+    width: auto;                          /* Width according to content size */
+    text-decoration: none;
+}

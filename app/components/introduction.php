@@ -2,7 +2,7 @@
     <div class="intro-content">
         <h1>WildCampers</h1>
         <p>Explore the wilderness with our top-quality 4x4 rental services</p>
-        <a href="index.php?page=booking" class="button">Book now</a>
+        <a href="http://dev.wild-camper.com/app/booking/booking.php" class="button">Book now</a>
     </div>
     <img src="public/img/wild-camper-logo.svg" alt="WildCampers Logo" class="intro-logo">
 </section>
