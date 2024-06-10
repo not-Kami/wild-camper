@@ -1,7 +1,11 @@
+#fleet {
+    margin: var(--spacing-xlarge);
+}
+
 .vehicle-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-    grid-gap: 32px; /* Gap between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 32px;
     padding: var(--spacing-xlarge);
 }
 
@@ -11,9 +15,10 @@
     overflow: hidden;
     text-align: center;
     background-color: var(--second-bg-color);
-    padding-bottom: 60px; /* Space for the button */
-    height: 400px; /* Fixed height */
-    box-sizing: border-box; /* Include padding in width and height */
+    padding-bottom: 60px;
+    height: 450px;
+    box-sizing: border-box;
+    width: 300px; /* Fixed width */
 }
 
 .vehicle-card h3 {
@@ -77,6 +82,7 @@
     color: var(--white-text);
     border-radius: 8px;
     font-size: var(--font-size-paragraph);
+    margin-bottom: var(--spacing-small);
 }
 
 .button-container {
@@ -101,7 +107,7 @@
     z-index: 10;
 }
 
-.cta{
+.cta {
     color: var(--white-text);
     text-align: center;
     padding: 10px 20px;
@@ -112,22 +118,106 @@
     text-decoration: bold;
 }
 
-.cta a{
+.cta a {
     color: var(--kaki-green);
     text-align: center;
     text-decoration: none;
 }
 
+/* Filter styles */
 
-/* Media queries pour la réactivité */
+.filter-container {
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+    background-color: var(--kaki-green);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.filter-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 36px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.filter-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.filter-column {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.select-dropdown {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: var(--kaki-green);
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tags-container label {
+    background-color: white;
+    color: var(--kaki-green);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tags-container input[type="checkbox"] {
+    display: none;
+}
+
+.tags-container input[type="checkbox"]:checked + label {
+    background-color: #6b8e23; /* Darker shade of kaki green */
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-options {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-column {
+        flex: 1 1 100%; /* Make columns stack on smaller screens */
+    }
+}
+
 @media (max-width: 1200px) {
     .vehicle-card {
-        width: calc(50% - 20px); /* Deux cartes par rangée pour les écrans moyens */
+        width: calc(50% - 20px); /* Two cards per row for medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .vehicle-card {
-        width: calc(100% - 20px); /* Une carte par rangée pour les petits écrans */
+        width: calc(100% - 20px); /* One card per row for small screens */
     }
 }

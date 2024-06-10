@@ -1,4 +1,3 @@
-
 .hero {
     background-image: url('../img/hero_land_rover.png');
     background-size: cover;
@@ -6,15 +5,20 @@
     height: 65vh;
     color: var(--white-text);
     width: 100%;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    position: relative; /* Position relative for absolute positioning of button */
 }
 
 .hero-content {
     text-align: right;
-    width: 100%; /* Sets the width to 100% */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    position: relative;
 }
 
 .hero-content h1,
@@ -22,22 +26,38 @@
     margin: var(--spacing-medium) var(--spacing-xlarge);
 }
 
-.hero-content button {
+.hero-content .button {
     display: block;
-    width: auto;
-    margin: var(--spacing-medium) auto 0;
     padding: 10px 20px;
+    background-color: var(--white-text) !important; /* Invert background color */
+    color: var(--kaki-green) !important; /* Invert text color */
+    position: absolute; /* Absolute positioning */
+    bottom: -256px; /* Spacing from bottom */
+    left: 50%; /* Center horizontally */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .hero {
-        justify-content: center; /* Center content on smaller screens */
-        padding-right: 0; /* Remove right padding on small screens */
+        justify-content: center;
+        padding-right: 0;
+        text-align: center;
     }
 
     .hero-content {
-        text-align: center; /* Center text on smaller screens */
-        max-width: 80%; /* Wider content area on smaller screens */
+        text-align: center;
+        align-items: center;
+        max-width: 80%;
+    }
+
+    .hero-content h1,
+    .hero-content p {
+        margin: var(--spacing-medium) auto;
+    }
+
+    .hero-content .button {
+        bottom: var(--spacing-large);
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

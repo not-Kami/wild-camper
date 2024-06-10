@@ -11,37 +11,42 @@ try {
     exit();
 }
 ?>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/js/splide.min.js"></script>
 <section class="carousel-section">
     <div id="splide" class="splide">
         <div class="splide__track">
             <ul class="splide__list">
-                <?php foreach ($vehicles as $vehicle): ?>
-                    <li class="splide__slide item-card">
-                        <div class="image" style="background-image: url('<?= htmlspecialchars($vehicle['image_path']) ?>');"></div>
-                        <h3><?= htmlspecialchars($vehicle['name']) ?></h3>
-                        <a class="button" href="index.php?page=detail&id=<?= htmlspecialchars($vehicle['id']) ?>">Learn More</a>
-                    </li>
-                <?php endforeach; ?>
+            <?php foreach ($vehicles as $vehicle): ?>
+                <li class="splide__slide item-card">
+                    <a href="index.php?page=detail&id=<?= htmlspecialchars($vehicle['id']) ?>" class="card-link">
+                        <div class="image" style="background-image: url('<?= htmlspecialchars($vehicle['image_path']) ?>');">
+                            <div class="vehicle-name"><?= htmlspecialchars($vehicle['name']) ?></div>
+                        </div>
+                    </a>
+                </li>
+            <?php endforeach; ?>
             </ul>
         </div>
     </div>
 </section>
-
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth > 768) { // Only initialize if screen width is greater than 768px
         new Splide('#splide', {
-            type   : 'loop',
+            type: 'loop',
             perPage: 3,
             perMove: 1,
             autoplay: true,
-            interval: 02000, // Intervalle de l'autoplay en millisecondes
-            gap: '1rem',  // Ajustez l'espace entre les cartes
-            padding: {
-                right: '1.5rem',  // Ajustez l'espace de remplissage à droite
-                left : '1.5rem',  // Ajustez l'espace de remplissage à gauche
-            },
-            arrows: false, // Désactiver les flèches de navigation
-            pagination: false, // Désactiver les indicateurs de pagination
+            interval: 2000, // Autoplay interval in milliseconds
+            pauseOnHover: false, // Prevent autoplay from pausing on hover
+            pauseOnFocus: false, // Prevent autoplay from pausing on focus
+            resetProgress: false, // Keep the elapsed time when autoplay restarts
+            arrows: false,
+            pagination: false,
+            gap: '20px', // Ensure the gap is defined here as well
         }).mount();
-    });
+    }
+});
+
+
 </script>

@@ -209,6 +209,20 @@ h4 {
     width: auto;                          /* Width according to content size */
     text-decoration: none;
 }
+
+.button-alt {
+    background-color: var(--white-text) !important; /* Ensure the button has the kaki-green background color */
+    color: var(--kaki-green);             /* Text color for the button */
+    border: none;                         /* No border */
+    border-radius: 20px;                  /* Pill shape */
+    padding: 10px 20px;                   /* Padding to adjust button size */
+    cursor: pointer;                      /* Cursor changes to pointer to indicate it's clickable */
+    text-align: center;                   /* Center the text inside the button */
+    display: inline-block;                /* Allows the button to size according to its content */
+    margin: 0 auto;                       /* Center the button horizontally if needed */
+    width: auto;                          /* Width according to content size */
+    text-decoration: none;
+}
 /* Footer styles */
 
 footer {
@@ -293,4 +307,10 @@ footer {
         display: flex;
         gap: 10px;
     }
+}
+
+/* Toggle classes */
+
+.hidden {
+    display: none;
 }

@@ -1,64 +1,106 @@
 .carousel-section {
-    margin-top: var(--spacing-large);
+    margin-top: var(--spacing-xlarge); /* Add extra-large spacing above */
+    margin-bottom: var(--spacing-xlarge); /* Add extra-large spacing below */
     display: flex;
     justify-content: center;
 }
 
 .splide {
-    height: 512px;
-    width: 80%; /* Adjust as needed to center the carousel */
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 32px;
+    box-sizing: border-box;
 }
+
+.splide__track {
+    padding: 0;
+    margin: 0;
+}
+
+.splide__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 20px; /* Add gap between the cards */
+}
+
 .splide__slide.item-card {
-    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 16px;
     border-radius: 8px;
     overflow: hidden;
-    background-color: transparent; /* Change to transparent */
+    background-color: #fff;
     box-sizing: border-box;
-    width: 220px; /* Set fixed width for the cards */
+    width: calc((100% / 3) - 20px); /* Adjust width to account for gap */
+    margin: 0;
+    padding: 0; /* Remove padding bottom to eliminate white border */
     transition: transform 0.3s ease;
 }
 
-.splide__slide.item-card:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-}
-
 .image {
-    width: 100%; /* Ensure the image div takes the full width of the parent */
-    height: 200px; /* Set a fixed height for the image */
+    width: 100%;
+    height: 300px;
     background-size: cover;
     background-position: center;
     border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.vehicle-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white-text);
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+}
+
+.item-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.card-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
 }
 
 ul h3 {
     margin: 0;
-    padding: 16px;
+    padding: 0;
     font-size: 18px;
     color: var(--kaki-green);
-    background-color: var(--light-grey); /* Add background color if needed */
-    width: 100%;
+    width: auto;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 1200px) {
     .splide__slide.item-card {
-        width: 180px; /* Adjust width for medium screens */
+        width: calc((100% / 3) - 20px); /* Adjust width for medium screens */
     }
     .image {
-        height: 180px; /* Adjust height for medium screens */
+        height: 180px;
     }
 }
 
 @media (max-width: 768px) {
     .splide__slide.item-card {
-        width: 140px; /* Adjust width for small screens */
+        width: calc((100% / 2) - 20px); /* Adjust width for small screens */
     }
     .image {
-        height: 140px; /* Adjust height for small screens */
+        height: 140px;
     }
-}
