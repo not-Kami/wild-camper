@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 09 mai 2024 à 19:43
+-- Généré le : sam. 06 juil. 2024 à 13:07
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -58,23 +58,31 @@ CREATE TABLE `fleet` (
   `available` tinyint(1) NOT NULL DEFAULT 1,
   `featured` int(11) NOT NULL,
   `category_id` int(11) DEFAULT NULL,
-  `theme_id` int(11) DEFAULT NULL
+  `theme_id` int(11) DEFAULT NULL,
+  `image_path` varchar(255) DEFAULT NULL,
+  `specs` text DEFAULT NULL,
+  `capacity` int(11) NOT NULL,
+  `year` int(11) NOT NULL,
+  `transmission` varchar(50) NOT NULL,
+  `fuel` varchar(50) NOT NULL,
+  `max_travelers` int(11) DEFAULT NULL,
+  `pet_friendly` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `fleet`
 --
 
-INSERT INTO `fleet` (`id`, `name`, `description`, `price_per_week`, `available`, `featured`, `category_id`, `theme_id`) VALUES
-(1, 'Land Rover Defender', 'Travel with a legend. The Land Rover Defender is an icon of resilience and reliability. Its timeless design and proven durability make it a top choice for adventurers who demand performance in the most demanding conditions. Get ready to make your mark in the wilds.', 1200.00, 1, 0, 1, 1),
-(2, 'Toyota Hilux', 'Experience the raw power and robustness of the Toyota Hilux. Designed for the most challenging landscapes, it combines strength with advanced technology to deliver an unparalleled driving experience. Ideal for conquering tough trails and long expeditions with ease.', 1100.00, 1, 0, 1, 1),
-(3, 'Mercedes Viano', 'Experience the space and comfort of the Mercedes Viano. With ample room for your passengers and gear, the Viano delivers a smooth and luxurious ride for long journeys. Perfect for those who seek both sophistication and capability on their road adventures.', 1300.00, 1, 0, 5, 2),
-(4, 'Land Rover Discovery 4', 'Embark on your adventure with the Land Rover Discovery 4. Renowned for its luxurious comfort and exceptional off-road capabilities, this vehicle promises an unforgettable journey through any terrain. Perfect for those who seek both sophistication and ruggedness on their travels.', 1250.00, 1, 0, 1, 1),
-(5, 'VW Caravelle', 'Experience the power and robustness of the VW Caravelle. Designed for the most challenging landscapes, it combines strength with advanced technology to deliver an unparalleled driving experience. Ideal for conquering tough trails and long expeditions with ease.', 1000.00, 1, 0, 2, 2),
-(6, 'Jeep Wrangler', 'Experience the iconic Jeep Wrangler, designed for freedom and engineered to deliver top performance on and off the road. Ideal for those who crave adventure and wish to explore without boundaries.', 1100.00, 1, 0, 1, 1),
-(7, 'Jeep Wrangler', 'Experience the iconic Jeep Wrangler, designed for freedom and engineered to deliver top performance on and off the road. Ideal for those who crave adventure and wish to explore without boundaries.', 1100.00, 1, 0, 1, 1),
-(8, 'Nissan Patrol', 'Experience the raw power and robustness of the Nissan Patrol. Designed for the most challenging landscapes, it combines strength with advanced technology to deliver an unparalleled driving experience. Ideal for conquering tough trails and long expeditions with ease.', 1150.00, 1, 0, 1, 1),
-(9, 'Dodge Ram', 'Discover the legendary power and capability of the Dodge Ram. Built for the toughest jobs and the most rugged terrain, it offers unparalleled performance and durability. Whether it s hauling heavy loads or tackling off-road adventures, the Dodge Ram is ready to conquer any challenge with style.', 1300.00, 1, 0, 1, NULL);
+INSERT INTO `fleet` (`id`, `name`, `description`, `price_per_week`, `available`, `featured`, `category_id`, `theme_id`, `image_path`, `specs`, `capacity`, `year`, `transmission`, `fuel`, `max_travelers`, `pet_friendly`) VALUES
+(1, 'Land Rover Defender', 'The Land Rover Defender embodies legendary toughness and reliability. With its timeless design and proven durability, it is the perfect choice for demanding adventurers. Get ready to make your mark in the wild.', 1200.00, 1, 0, 1, 1, 'public/img/vehicles/range_rover.png', NULL, 5, 2020, 'Automatic', 'Diesel', 5, 1),
+(2, 'Toyota Hilux', 'The Toyota Hilux combines raw power and advanced technology to deliver an unparalleled driving experience. Designed for the toughest terrains, it is ideal for long expeditions and extreme adventures.', 1100.00, 1, 1, 1, 1, 'public/img/vehicles/toyota_hilux.png', NULL, 5, 2019, 'Manual', 'Diesel', 4, 0),
+(3, 'Mercedes Viano', 'The Mercedes Viano offers space and comfort for your passengers and luggage. With a smooth and luxurious ride, it is the perfect companion for long journeys, combining sophistication and performance on the road.', 1300.00, 1, 0, 5, 2, 'public/img/vehicles/mercedes_viano.png', NULL, 7, 2018, 'Automatic', 'Petrol', 5, 0),
+(4, 'Land Rover Discovery 4', 'The Land Rover Discovery 4 is renowned for its luxurious comfort and exceptional off-road capabilities. This vehicle promises an unforgettable adventure on any terrain, blending sophistication and ruggedness.', 1250.00, 1, 1, 1, 1, 'public/img/vehicles/land_rover_discovery.png', NULL, 7, 2020, 'Automatic', 'Diesel', 4, 1),
+(5, 'VW Caravelle', 'The VW Caravelle combines power and toughness for the most demanding landscapes. With advanced technology, it offers an unparalleled driving experience, ideal for difficult expeditions and long journeys.', 1000.00, 1, 1, 2, 2, 'public/img/vehicles/vw_caravelle.png', NULL, 8, 2021, 'Automatic', 'Diesel', 7, 1),
+(6, 'Jeep Wrangler', 'The Jeep Wrangler is a symbol of freedom and performance. Designed for adventure, it excels both on and off-road, perfect for those who seek to explore without limits.', 1100.00, 1, 0, 1, 5, 'public/img/vehicles/jeep_wrangler.png', NULL, 5, 2019, 'Manual', 'Petrol', 2, 0),
+(7, 'Volvo XC90', 'The Volvo XC90 combines iconic design with exceptional performance. Designed for freedom, it delivers top performance on and off-road, ideal for adventurers looking to explore.', 1100.00, 1, 0, 3, 3, 'public/img/vehicles/volvo_xc90.png', NULL, 5, 2020, 'Automatic', 'Hybrid', 5, 1),
+(8, 'Nissan Patrol', 'The Nissan Patrol is designed for the toughest landscapes with raw power and advanced technology. It offers an unparalleled driving experience, perfect for long expeditions and adventures.', 1150.00, 0, 0, 4, 1, 'public/img/vehicles/nissan_patrol.png', NULL, 5, 2018, 'Manual', 'Diesel', 5, 0),
+(9, 'Dodge Ram', 'The Dodge Ram combines legendary power and exceptional capabilities. Built for the toughest terrains and heavy loads, it offers unmatched performance and durability for all your adventures.', 1300.00, 1, 1, 1, 5, 'public/img/vehicles/dodge_ram.png', NULL, 6, 2021, 'Automatic', 'Diesel', 6, 1);
 
 -- --------------------------------------------------------
 
@@ -98,6 +106,26 @@ INSERT INTO `language` (`id`, `name`, `code`) VALUES
 (3, 'Español', 'ES'),
 (4, 'Deutsch', 'DE'),
 (5, 'Italiano', 'IT');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `reservations`
+--
+
+CREATE TABLE `reservations` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `vehicle_id` int(11) NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  `adults` int(11) NOT NULL,
+  `children` int(11) NOT NULL,
+  `pets` int(11) NOT NULL DEFAULT 0,
+  `status` varchar(50) DEFAULT 'pending',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -158,21 +186,21 @@ CREATE TABLE `tag` (
 --
 
 INSERT INTO `tag` (`id`, `name`) VALUES
-(1, 'Tout-terrain'),
-(2, 'Équipement de camping inclus'),
-(3, 'Hybride ou électrique'),
-(4, 'Grande autonomie'),
-(5, 'Navigation GPS'),
-(6, 'Sièges chauffants'),
-(7, 'Toit ouvrant'),
-(8, 'Idéal pour les road trips'),
-(9, 'Animaux autorisés'),
-(10, 'Porte-bagages'),
-(11, 'Capacité de remorquage élevée'),
-(12, 'Transmission manuelle'),
-(13, 'Faible consommation'),
-(14, 'Assurance tous risques incluse'),
-(15, 'Disponible pour location à long terme');
+(1, 'Off-road'),
+(2, 'Camping equipment included'),
+(3, 'Hybrid or electric'),
+(4, 'Long range'),
+(5, 'GPS Navigation'),
+(6, 'Heated seats'),
+(7, 'Sunroof'),
+(8, 'Ideal for road trips'),
+(9, 'Pets allowed'),
+(10, 'Roof rack'),
+(11, 'High towing capacity'),
+(12, 'Manual transmission'),
+(13, 'Low consumption'),
+(14, 'Full insurance included'),
+(15, 'Available for long-term rental');
 
 -- --------------------------------------------------------
 
@@ -234,37 +262,98 @@ INSERT INTO `user` (`id`, `username`, `email`, `password`, `role_id`, `account_c
 -- --------------------------------------------------------
 
 --
--- Structure de la table `vehicle_tags`
+-- Structure de la table `user_favorite_vehicles`
 --
 
-CREATE TABLE `vehicle_tags` (
+CREATE TABLE `user_favorite_vehicles` (
+  `user_id` int(11) NOT NULL,
+  `vehicle_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `user_favorite_vehicles`
+--
+
+INSERT INTO `user_favorite_vehicles` (`user_id`, `vehicle_id`) VALUES
+(1, 1),
+(2, 3),
+(2, 4),
+(4, 5),
+(5, 8);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `vehicle_tag`
+--
+
+CREATE TABLE `vehicle_tag` (
   `vehicle_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `vehicle_tags`
+-- Déchargement des données de la table `vehicle_tag`
 --
 
-INSERT INTO `vehicle_tags` (`vehicle_id`, `tag_id`) VALUES
+INSERT INTO `vehicle_tag` (`vehicle_id`, `tag_id`) VALUES
 (1, 1),
+(1, 5),
+(1, 6),
 (1, 8),
+(1, 10),
+(1, 14),
 (2, 1),
+(2, 5),
 (2, 8),
-(3, 2),
-(3, 15),
+(2, 10),
+(2, 11),
+(2, 12),
+(2, 14),
+(3, 4),
+(3, 5),
+(3, 8),
+(3, 14),
 (4, 1),
-(4, 7),
-(5, 2),
-(5, 15),
+(4, 5),
+(4, 6),
+(4, 8),
+(4, 10),
+(4, 14),
+(5, 1),
+(5, 5),
+(5, 6),
+(5, 8),
+(5, 10),
+(5, 14),
 (6, 1),
+(6, 7),
 (6, 8),
+(6, 10),
+(6, 11),
+(6, 14),
 (7, 1),
+(7, 3),
+(7, 4),
+(7, 5),
+(7, 6),
 (7, 8),
+(7, 10),
+(7, 13),
+(7, 14),
 (8, 1),
+(8, 5),
+(8, 8),
+(8, 10),
 (8, 11),
+(8, 12),
+(8, 14),
 (9, 1),
-(9, 8);
+(9, 5),
+(9, 6),
+(9, 8),
+(9, 10),
+(9, 14);
 
 --
 -- Index pour les tables déchargées
@@ -289,6 +378,14 @@ ALTER TABLE `fleet`
 --
 ALTER TABLE `language`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `reservations`
+--
+ALTER TABLE `reservations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `vehicle_id` (`vehicle_id`);
 
 --
 -- Index pour la table `reviews`
@@ -325,9 +422,16 @@ ALTER TABLE `user`
   ADD KEY `language_id` (`language_id`);
 
 --
--- Index pour la table `vehicle_tags`
+-- Index pour la table `user_favorite_vehicles`
 --
-ALTER TABLE `vehicle_tags`
+ALTER TABLE `user_favorite_vehicles`
+  ADD PRIMARY KEY (`user_id`,`vehicle_id`),
+  ADD KEY `vehicle_id` (`vehicle_id`);
+
+--
+-- Index pour la table `vehicle_tag`
+--
+ALTER TABLE `vehicle_tag`
   ADD PRIMARY KEY (`vehicle_id`,`tag_id`),
   ADD KEY `tag_id` (`tag_id`);
 
@@ -352,6 +456,12 @@ ALTER TABLE `fleet`
 --
 ALTER TABLE `language`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT pour la table `reservations`
+--
+ALTER TABLE `reservations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `reviews`
@@ -395,6 +505,13 @@ ALTER TABLE `fleet`
   ADD CONSTRAINT `fleet_ibfk_2` FOREIGN KEY (`theme_id`) REFERENCES `theme` (`id`);
 
 --
+-- Contraintes pour la table `reservations`
+--
+ALTER TABLE `reservations`
+  ADD CONSTRAINT `reservations_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `reservations_ibfk_2` FOREIGN KEY (`vehicle_id`) REFERENCES `fleet` (`id`);
+
+--
 -- Contraintes pour la table `reviews`
 --
 ALTER TABLE `reviews`
@@ -409,11 +526,18 @@ ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_2` FOREIGN KEY (`language_id`) REFERENCES `language` (`id`);
 
 --
--- Contraintes pour la table `vehicle_tags`
+-- Contraintes pour la table `user_favorite_vehicles`
 --
-ALTER TABLE `vehicle_tags`
-  ADD CONSTRAINT `vehicle_tags_ibfk_1` FOREIGN KEY (`vehicle_id`) REFERENCES `fleet` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `vehicle_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `user_favorite_vehicles`
+  ADD CONSTRAINT `user_favorite_vehicles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_favorite_vehicles_ibfk_2` FOREIGN KEY (`vehicle_id`) REFERENCES `fleet` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `vehicle_tag`
+--
+ALTER TABLE `vehicle_tag`
+  ADD CONSTRAINT `vehicle_tag_ibfk_1` FOREIGN KEY (`vehicle_id`) REFERENCES `fleet` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `vehicle_tag_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

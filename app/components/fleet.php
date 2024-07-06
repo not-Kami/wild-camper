@@ -119,12 +119,14 @@ $favorites = fetchFavorites($pdo, $user_id);
     </div>
 </div>
 
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
+<script>document.addEventListener('DOMContentLoaded', function() {
     const filterToggle = document.getElementById('filter-toggle');
     const filterOptions = document.getElementById('filter-options');
     const applyFiltersButton = document.getElementById('apply-filters');
     const clearFiltersButton = document.getElementById('clear-filters');
+
+    // Hide filter options initially
+    filterOptions.classList.add('hidden');
 
     filterToggle.addEventListener('click', function() {
         filterOptions.classList.toggle('hidden');
@@ -170,7 +172,7 @@ $favorites = fetchFavorites($pdo, $user_id);
     });
 
     clearFiltersButton.addEventListener('click', function() {
-        window.location.href = window.location.pathname;
+        window.location.href = 'index.php?page=catalog';
     });
 
     const favoriteHearts = document.querySelectorAll('.favorite-heart');

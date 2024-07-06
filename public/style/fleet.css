@@ -7,6 +7,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 32px;
     padding: var(--spacing-xlarge);
+    justify-content: center; /* Center the cards */
 }
 
 .vehicle-card {
@@ -151,6 +152,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
+    justify-content: center;
 }
 
 .filter-column {
@@ -171,8 +173,11 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAxMiI+PHBhdGggZD0iTTEyIDMuODlMMTEuMSAzIDEuNSAxMS41IDAgMTEuNTEuNDkgMTEuMTEgMS41IDExLjU4IDEuNSAxMS41TDEyIDMuODl6Ii8+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
 }
-
 
 .tags-container {
     display: flex;
