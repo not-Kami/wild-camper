@@ -1,17 +1,26 @@
 .contact-section {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centers content vertically */
-    padding: var(--spacing-large);
+    align-items: flex-start; /* Align to top for better form layout */
+    padding: var(--spacing-xlarge);
     background-color: var(--second-bg-color);
     color: var(--white-text);
+    min-height: 400px;
 }
 
-.contact-info, 
+.contact-info {
+    flex-basis: 45%;
+    max-width: 45%;
+    padding: var(--spacing-large);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .contact-form {
-    flex-basis: 50%; /* Each takes up 50% of the flex container */
-    max-width: 50%; /* Ensures that neither section exceeds half of the container */
-    padding: var(--spacing-large); /* Adds padding within each section */
+    flex-basis: 50%;
+    max-width: 50%;
+    padding: var(--spacing-large);
 }
 
 .form-group {

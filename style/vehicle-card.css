@@ -1,0 +1,141 @@
+/* Styles pour les cartes de véhicules - composant réutilisable */
+
+.vehicle-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: cover;
+    object-position: center;
+    background-color: #f0f0f0;
+    display: block;
+}
+
+.vehicle-card-content {
+    padding: var(--spacing-medium);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    min-height: 200px;
+}
+
+.vehicle-card-content h3 {
+    font-size: var(--font-size-h4);
+    color: #333;
+    margin: 0 0 var(--spacing-small) 0;
+    font-weight: 600;
+}
+
+.vehicle-card-content p {
+    font-size: var(--font-size-paragraph);
+    color: #666;
+    line-height: 1.5;
+    margin: 0 0 var(--spacing-medium) 0;
+    flex-grow: 1;
+}
+
+.vehicle-card-content .learn-more {
+    background-color: var(--kaki-green);
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: var(--font-size-paragraph);
+    display: inline-block;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.vehicle-card-content .learn-more:hover {
+    background-color: var(--accent-brown);
+}
+
+/* Pour le carousel Splide */
+.splide__slide .vehicle-card {
+    margin: 0;
+    height: 100%;
+    min-height: 450px;
+    max-height: 450px;
+    width: 100%;
+}
+
+.splide__slide .vehicle-card img {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.splide__slide .vehicle-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+
+/* Responsive pour les cartes dans le carousel */
+@media (max-width: 768px) {
+    .vehicle-card img {
+        height: 200px;
+    }
+    
+    .vehicle-card-content {
+        padding: var(--spacing-small);
+    }
+}
+
+/* Styles pour la grille de flotte */
+.fleet-grid-section {
+    padding: var(--spacing-xlarge);
+    background-color: var(--main-bg-color);
+}
+
+.fleet-grid-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xlarge);
+    color: var(--white-text);
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-h2);
+}
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-large);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .fleet-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+    }
+}
+

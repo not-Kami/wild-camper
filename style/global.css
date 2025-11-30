@@ -5,13 +5,13 @@
 /*Variables*/
 
 :root {
-    /* Color Palette from Figma */
-    --kaki-green: #46512E;       /* Used for headers, footers, etc */
-    --second-bg-color: #1E1E1E;  /* Secondary background color */
-    --main-bg-color: #9E8B74;    /* Main background color */
-    --light-grey: #D9D9D9;       /* Used for lighter text or elements */
-    --accent-brown: #534534;     /* Accent color for buttons, links, etc */
-    --white-text: #EEEEEE;       /* Text color for dark backgrounds */
+    /* Color Palette from Figma/Anima */
+    --kaki-green: rgba(70, 81, 46, 1);       /* Used for headers, footers, etc */
+    --second-bg-color: rgba(30, 30, 30, 1);  /* Secondary background color */
+    --main-bg-color: rgba(158, 139, 116, 1);    /* Main background color */
+    --light-grey: rgba(217, 217, 217, 1);       /* Used for lighter text or elements */
+    --accent-brown: rgba(83, 69, 52, 1);     /* Accent color for buttons, links, etc */
+    --white-text: rgba(238, 238, 238, 1);       /* Text color for dark backgrounds */
 
     /* Typography */
     --font-primary: 'Roboto', sans-serif; /* Primary font for text */
@@ -35,19 +35,16 @@
 }
 /* Global styles */
 
-html, body {
+html {
     height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 body {
-    flex: 1;  /* Ensures body takes up the rest of the space */
-    min-height: 100vh; /* Ensures at least full viewport height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
     background-color: var(--main-bg-color);
     font-family: var(--font-primary);
 }
@@ -65,12 +62,21 @@ header {
     min-height: 80px; /* Définir une hauteur pour le header */
 }
 
-.logo {
+.logo-link {
     position: absolute;
     left: 20px;
-    height: 80%; /* Utiliser 100% de la hauteur du header */
-    width: auto; /* Maintenir les proportions du logo */
+    height: 80%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
     transform: scaleX(-1);
+    display: block;
 }
 
 nav {
@@ -101,9 +107,10 @@ nav ul li a {
 /* Main content styles */
 
 main {
-    flex: 1; /* Prend tout l'espace disponible */
-    display: flex; /* Permet à main d'être flexible */
-    flex-direction: column; /* Direction de flux du contenu */
+    flex: 1 0 auto; /* Prend tout l'espace disponible, ne rétrécit pas */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 /* Overall text styles */
@@ -131,32 +138,31 @@ h2 {
 /* Footer styles */
 
 footer {
-    position: relative; /* Essential for containing absolutely positioned children */
+    flex-shrink: 0; /* Ne rétrécit pas */
     background-color: var(--kaki-green);
     color: var(--white-text);
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 12px; /* Smaller font size for footer content */
-    width: 100%; /* Ensures footer takes full width */
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Vertically aligns the footer content */
-    box-sizing: border-box; /* Include padding and border in the total width */
+    padding: 20px;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto; /* Push footer to bottom */
 }
 
 .footer-container {
-    width: 100%; /* Ensure the container takes full width of the footer */
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    box-sizing: border-box; /* Include padding and border in the total width */
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-bottom: 40px; /* Space for copyright and social links */
 }
 
 .social-links {
-    position: absolute;
-    bottom: 10px; /* Position from the bottom of the footer */
-    right: 20px; /* Position from the right of the footer */
     display: flex;
     gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--spacing-medium);
 }
 
 .social-links img {
@@ -182,10 +188,10 @@ footer {
 
 .footer-copy {
     text-align: center;
-    width: 100%; /* Full width to center the text appropriately */
-    position: absolute;
-    bottom: 0; /* Align at the bottom */
-    left: 0; /* Align to the left */
+    width: 100%;
+    margin-top: var(--spacing-medium);
+    padding-top: var(--spacing-medium);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -194,12 +200,13 @@ footer {
         text-align: center;
     }
 
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-medium);
+    }
+    
     .social-links {
-        position: absolute; /* Absolute position on small screens */
-        bottom: 10px; /* Position from the bottom of the footer */
-        right: 50%; /* Position in the middle of the footer */
-        transform: translateX(50%); /* Center horizontally */
-        display: flex;
-        gap: 10px;
+        justify-content: center;
     }
 }

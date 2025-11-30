@@ -4,19 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wild Campers - Your Ultimate Adventure Companion!</title>
-    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="/style/global.css">
     
     <?php
-    // Détermine le nom de la page actuelle
-    $layout = ['
-        home' => ['hero', 'carousel', 'contact'],
-        'about' => ['contact'], 
-        'fleet' => ['contact'], 
-        'booking' => ['contact'], 
-        'contact' => ['contact']
-];
-
-    $page = basename($_SERVER['PHP_SELF'], ".php");
+    // $page et $layout sont déjà définis dans index.php
     
     if(isset($layout[$page])) {
         if ($page == 'home') {
@@ -25,28 +16,32 @@
         }
 
         foreach($layout[$page] as $css) {
-            echo '<link rel="stylesheet" type="text/css" href="style/' . $css . '.css">';
+            $cssFile = '/style/' . $css . '.css';
+            if (file_exists(__DIR__ . '/../../style/' . $css . '.css')) {
+                echo '<link rel="stylesheet" type="text/css" href="' . $cssFile . '">';
+            }
         }
     }
     else {
-        echo '<link rel="stylesheet" type="text/css" href="style/404.css">';
+        echo '<link rel="stylesheet" type="text/css" href="/style/404.css">';
     }
     ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 <header>
-    <img src="img/wild-camper-logo.svg" alt="Wild Camper Logo" class="logo">
+    <a href="/index.php?page=home" class="logo-link">
+        <img src="/img/wild-camper-logo.svg" alt="Wild Camper Logo" class="logo">
+    </a>
     <nav>
         <ul>
-            <li><a href="index.php?page=home">Home</a></li>
-            <li><a href="index.php?page=booking">Booking</a></li>
-            <li><a href="index.php?page=fleet">Our fleet</a></li>
-            <li><a href="index.php?page=about_us">About us</a></li>
+            <li><a href="/index.php?page=home">Home</a></li>
+            <li><a href="/index.php?page=booking">Booking</a></li>
+            <li><a href="/index.php?page=fleet">Our fleet</a></li>
+            <li><a href="/index.php?page=about">About us</a></li>
         </ul>
     </nav>
 </header>
@@ -54,7 +49,14 @@
 
     <main>
         <!-- Ici, nous incluons des sections modulaires selon la page -->
-            <?php include 'public/' . $page . '.php'; ?>
+            <?php 
+            $pageFile = __DIR__ . '/../' . $page . '.php';
+            if (file_exists($pageFile)) {
+                include $pageFile;
+            } else {
+                include __DIR__ . '/../404.php';
+            }
+            ?>
     </main>
 
     <footer>
@@ -85,12 +87,12 @@
             </ul>
         </div>
     </div>
-    <p class="footer-copy">© 2024 WildCampers. All rights reserved.</p><div class="social-links">
-        <div class="social-links">
-            <a href="https://facebook.com"><img src="img/facebook.svg" alt="Facebook"></a>
-            <a href="https://twitter.com"><img src="img/twitter-alt.svg" alt="Twitter"></a>
-            <a href="https://instagram.com"><img src="img/instagram.svg" alt="Instagram"></a>
-     </div>
+    <p class="footer-copy">© 2024 WildCampers. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://facebook.com"><img src="/img/facebook.svg" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="/img/twitter-alt.svg" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="/img/instagram.svg" alt="Instagram"></a>
+    </div>
 </footer>
 
 </body>

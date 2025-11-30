@@ -1,0 +1,1738 @@
+.landing {
+    position: relative;
+    width: 1280px;
+    height: 2800px;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .landing .aadba-cd-f {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 1280px;
+    height: 515px;
+    object-fit: cover;
+  }
+  
+  .landing .rectangle {
+    position: absolute;
+    top: 581px;
+    left: 0;
+    width: 1280px;
+    height: 646px;
+    background-color: #9e8a74;
+  }
+  
+  .landing .div {
+    position: absolute;
+    top: 1843px;
+    left: 0;
+    width: 1280px;
+    height: 646px;
+    background-color: #9e8a74;
+  }
+  
+  .landing .cards {
+    position: absolute;
+    top: 681px;
+    left: 112px;
+    width: 285px;
+    height: 446px;
+  }
+  
+  .landing .mask-group {
+    position: absolute;
+    width: 100%;
+    height: 48.88%;
+    top: 10.99%;
+    left: 0;
+  }
+  
+  .landing .frame {
+    display: flex;
+    width: 100%;
+    height: 10.99%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 58px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #d9d9d9;
+    border-radius: 20px 0px 0px 0px;
+    overflow: hidden;
+  }
+  
+  .landing .text-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    margin-top: -1.00px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #45502e;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .rectangle-2 {
+    position: absolute;
+    width: 100%;
+    height: 40.13%;
+    top: 59.87%;
+    left: 0;
+    background-color: #1e1e1e;
+  }
+  
+  .landing .learn-more {
+    position: absolute;
+    width: 48.42%;
+    height: 10.76%;
+    top: 87.67%;
+    left: 25.96%;
+    background-color: #45502e;
+    border-radius: 24px;
+  }
+  
+  .landing .text-wrapper-2 {
+    position: absolute;
+    width: 56.52%;
+    height: 63.33%;
+    top: 16.67%;
+    left: 21.74%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .p {
+    position: absolute;
+    width: 85.26%;
+    height: 27.58%;
+    top: 61.88%;
+    left: 7.37%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .group {
+    position: absolute;
+    top: 230px;
+    left: 759px;
+    width: 548px;
+    height: 167px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .landing .flexcontainer {
+    display: flex;
+    width: 546px;
+    height: 96px;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  
+  .landing .text {
+    position: relative;
+    align-self: stretch;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .span {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 40px;
+    letter-spacing: 0;
+  }
+  
+  .landing .text-wrapper-3 {
+    font-size: 24px;
+  }
+  
+  .landing .div-wrapper {
+    margin-left: 114px;
+    width: 146px;
+    height: 39px;
+    position: relative;
+    background-color: #45502e;
+    border-radius: 19.5px;
+  }
+  
+  .landing .text-wrapper-4 {
+    position: absolute;
+    width: 62.33%;
+    height: 61.54%;
+    top: 17.95%;
+    left: 19.18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .component {
+    position: absolute;
+    top: 676px;
+    left: 508px;
+    width: 300px;
+    height: 333px;
+  }
+  
+  .landing .rectangle-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 135.14%;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: #1e1e1e;
+  }
+  
+  .landing .rectangle-3 {
+    flex: 1;
+    width: 300px;
+    background-color: #d9d9d9;
+    border-radius: 16px 0px 0px 0px;
+  }
+  
+  .landing .img {
+    position: absolute;
+    width: 100%;
+    height: 65.70%;
+    top: 16.82%;
+    left: 0;
+  }
+  
+  .landing .land-rover-discovery {
+    position: absolute;
+    width: 32.33%;
+    height: 5.71%;
+    top: 6.61%;
+    left: 12.67%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #45502e;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .landing .embark-on-your {
+    position: absolute;
+    width: 91.00%;
+    height: 39.64%;
+    top: 81.08%;
+    left: 4.67%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .component-wrapper {
+    position: absolute;
+    top: 673px;
+    left: 919px;
+    width: 300px;
+    height: 333px;
+    display: flex;
+  }
+  
+  .landing .component-2 {
+    position: relative;
+    width: 300px;
+    height: 333px;
+  }
+  
+  .landing .rectangle-4 {
+    flex: 1;
+    width: 300px;
+    background-color: #d9d9d9;
+    border-radius: 16px 8px 0px 0px;
+  }
+  
+  .landing .text-wrapper-5 {
+    position: absolute;
+    width: 50.33%;
+    height: 5.71%;
+    top: 6.61%;
+    left: 12.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #45502e;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .landing .text-wrapper-6 {
+    position: absolute;
+    top: 943px;
+    left: 932px;
+    width: 273px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .group-2 {
+    position: absolute;
+    top: 1069px;
+    left: 575px;
+    width: 138px;
+    height: 48px;
+    background-color: #45502e;
+    border-radius: 24px;
+  }
+  
+  .landing .group-3 {
+    position: absolute;
+    top: 1069px;
+    left: 1000px;
+    width: 138px;
+    height: 48px;
+    background-color: #45502e;
+    border-radius: 24px;
+  }
+  
+  .landing .contact-section {
+    position: absolute;
+    top: 2173px;
+    left: calc(50.00% - 640px);
+    width: 1280px;
+    height: 458px;
+    background-color: #1e1e1e;
+  }
+  
+  .landing .frame-2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 179px;
+    position: relative;
+    width: 80.70%;
+    height: 90.83%;
+    top: 4.59%;
+    left: 9.61%;
+  }
+  
+  .landing .ready-for-adventure {
+    position: relative;
+    width: 426px;
+    height: 281px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-7 {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 32px;
+    letter-spacing: 0;
+  }
+  
+  .landing .text-wrapper-8 {
+    font-size: 16px;
+  }
+  
+  .landing .text-wrapper-9 {
+    font-size: 20px;
+  }
+  
+  .landing .message-form {
+    position: relative;
+    width: 428px;
+    height: 416px;
+  }
+  
+  .landing .message-submit {
+    position: absolute;
+    width: 27.57%;
+    height: 11.30%;
+    top: 88.70%;
+    left: 36.21%;
+    display: flex;
+  }
+  
+  .landing .group-4 {
+    flex: 1;
+    width: 120px;
+    position: relative;
+  }
+  
+  .landing .rectangle-5 {
+    position: absolute;
+    width: 98.33%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #45502e;
+    border-radius: 34.5px;
+  }
+  
+  .landing .text-wrapper-10 {
+    position: absolute;
+    width: 79.17%;
+    height: 59.57%;
+    top: 21.28%;
+    left: 10.00%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .message-default {
+    position: absolute;
+    width: 100%;
+    height: 93.03%;
+    top: 0;
+    left: 0;
+  }
+  
+  .landing .rectangle-6 {
+    position: absolute;
+    width: 86.94%;
+    height: 12.01%;
+    top: 8.88%;
+    left: 5.63%;
+    background-color: #d9d9d9;
+    border-radius: 23px;
+  }
+  
+  .landing .rectangle-7 {
+    position: absolute;
+    width: 86.94%;
+    height: 12.01%;
+    top: 26.37%;
+    left: 5.63%;
+    background-color: #d9d9d9;
+    border-radius: 23px;
+  }
+  
+  .landing .rectangle-8 {
+    position: absolute;
+    width: 86.94%;
+    height: 47.00%;
+    top: 43.86%;
+    left: 5.63%;
+    background-color: #d9d9d9;
+    border-radius: 23px;
+  }
+  
+  .landing .group-5 {
+    position: absolute;
+    width: 5.41%;
+    height: 6.66%;
+    top: 81.20%;
+    left: 85.14%;
+    background-image: url(./img/line-1.svg);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .landing .line {
+    position: absolute;
+    width: 96.91%;
+    height: 3.41%;
+    top: 31.41%;
+    left: 33.80%;
+  }
+  
+  .landing .line-2 {
+    position: absolute;
+    width: 44.22%;
+    height: 2.43%;
+    top: 65.41%;
+    left: 71.22%;
+  }
+  
+  .landing .text-wrapper-11 {
+    position: absolute;
+    width: 33.56%;
+    height: 14.88%;
+    top: 7.31%;
+    left: 12.39%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e1e1e;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-12 {
+    position: absolute;
+    width: 33.56%;
+    height: 14.88%;
+    top: 24.80%;
+    left: 12.39%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #1e1e1e;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-2 {
+    position: absolute;
+    width: 33.56%;
+    height: 14.88%;
+    top: 42.56%;
+    left: 12.39%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #1e1e1e;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .footer {
+    position: absolute;
+    top: 2631px;
+    left: 0;
+    width: 1280px;
+    height: 177px;
+    background-color: #45502e;
+  }
+  
+  .landing .text-wrapper-13 {
+    position: absolute;
+    width: 23.67%;
+    height: 10.73%;
+    top: 83.05%;
+    left: 38.20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .landing .frame-3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1120px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0px 114px;
+    position: absolute;
+    top: 19px;
+    left: 80px;
+  }
+  
+  .landing .quick-links-home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-14 {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  
+  .landing .text-wrapper-15 {
+    text-decoration: underline;
+  }
+  
+  .landing .div-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .group-6 {
+    position: relative;
+    width: 170px;
+    height: 56px;
+  }
+  
+  .landing .text-wrapper-16 {
+    position: absolute;
+    width: 38.24%;
+    height: 27.59%;
+    top: 0;
+    left: 0;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .landing .frame-4 {
+    display: flex;
+    width: 98.82%;
+    height: 41.38%;
+    align-items: flex-start;
+    gap: 24px;
+    position: absolute;
+    top: 58.62%;
+    left: 0;
+  }
+  
+  .landing .social-icons {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-bottom: -0.83px;
+  }
+  
+  .landing .rectangle-9 {
+    position: absolute;
+    top: 1219px;
+    left: 0;
+    width: 1280px;
+    height: 675px;
+    background-color: #1e1e1e;
+  }
+  
+  .landing .image-removebg {
+    position: absolute;
+    top: 1255px;
+    left: 0;
+    width: 1280px;
+    height: 639px;
+    object-fit: cover;
+  }
+  
+  .landing .text-wrapper-17 {
+    position: absolute;
+    top: 1227px;
+    left: 283px;
+    width: 627px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-18 {
+    position: absolute;
+    top: 1287px;
+    left: 707px;
+    width: 522px;
+    height: 227px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .learn-more-wrapper {
+    position: absolute;
+    top: 1514px;
+    left: 931px;
+    width: 138px;
+    height: 48px;
+    background-color: #45502e;
+    border-radius: 24px;
+  }
+  
+  .landing .text-wrapper-19 {
+    position: absolute;
+    top: 1941px;
+    left: calc(50.00% - 429px);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #45502e;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .landing .wildcamper-logo {
+    position: absolute;
+    top: 2026px;
+    left: 857px;
+    width: 174px;
+    height: 91px;
+  }
+  
+  .landing .vector {
+    position: absolute;
+    width: 2.64%;
+    height: 7.64%;
+    top: 22.90%;
+    left: 21.81%;
+  }
+  
+  .landing .group-7 {
+    position: absolute;
+    width: 88.97%;
+    height: 48.78%;
+    top: 50.73%;
+    left: 5.11%;
+  }
+  
+  .landing .vector-2 {
+    position: absolute;
+    width: 21.15%;
+    height: 85.38%;
+    top: 11.18%;
+    left: 5.29%;
+  }
+  
+  .landing .vector-3 {
+    position: absolute;
+    width: 19.36%;
+    height: 71.21%;
+    top: 28.79%;
+    left: 37.26%;
+  }
+  
+  .landing .vector-4 {
+    position: absolute;
+    width: 18.65%;
+    height: 71.21%;
+    top: 24.02%;
+    left: 43.23%;
+  }
+  
+  .landing .vector-5 {
+    position: absolute;
+    width: 20.64%;
+    height: 86.97%;
+    top: 9.59%;
+    left: 79.36%;
+  }
+  
+  .landing .vector-6 {
+    position: absolute;
+    width: 86.87%;
+    height: 59.63%;
+    top: 0;
+    left: 0;
+  }
+  
+  .landing .vector-7 {
+    position: absolute;
+    width: 100%;
+    height: 5.62%;
+    top: 94.38%;
+    left: 0;
+  }
+  
+  .landing .vector-8 {
+    position: absolute;
+    width: 12.05%;
+    height: 18.99%;
+    top: 48.80%;
+    left: 83.01%;
+  }
+  
+  .landing .vector-9 {
+    position: absolute;
+    width: 7.65%;
+    height: 21.78%;
+    top: 66.24%;
+    left: 84.59%;
+  }
+  
+  .landing .vector-10 {
+    position: absolute;
+    width: 8.91%;
+    height: 24.45%;
+    top: 66.23%;
+    left: 45.70%;
+  }
+  
+  .landing .vector-11 {
+    position: absolute;
+    width: 37.36%;
+    height: 8.01%;
+    top: 0;
+    left: 32.50%;
+  }
+  
+  .landing .vector-12 {
+    position: absolute;
+    width: 29.30%;
+    height: 8.84%;
+    top: 0;
+    left: 60.28%;
+  }
+  
+  .landing .vector-13 {
+    position: absolute;
+    width: 88.25%;
+    height: 66.12%;
+    top: 4.91%;
+    left: 7.42%;
+  }
+  
+  .landing .vector-14 {
+    position: absolute;
+    width: 17.97%;
+    height: 24.32%;
+    top: 46.71%;
+    left: 39.45%;
+  }
+  
+  .landing .vector-15 {
+    position: absolute;
+    width: 83.99%;
+    height: 48.34%;
+    top: 5.37%;
+    left: 7.37%;
+  }
+  
+  .landing .vector-16 {
+    position: absolute;
+    width: 17.33%;
+    height: 23.86%;
+    top: 45.98%;
+    left: 77.52%;
+  }
+  
+  .landing .vector-17 {
+    position: absolute;
+    width: 18.09%;
+    height: 22.41%;
+    top: 38.84%;
+    left: 12.83%;
+  }
+  
+  .landing .vector-18 {
+    position: absolute;
+    width: 13.61%;
+    height: 2.37%;
+    top: 57.84%;
+    left: 15.23%;
+  }
+  
+  .landing .vector-19 {
+    position: absolute;
+    width: 13.61%;
+    height: 2.37%;
+    top: 48.02%;
+    left: 15.34%;
+  }
+  
+  .landing .vector-20 {
+    position: absolute;
+    width: 13.61%;
+    height: 2.37%;
+    top: 52.93%;
+    left: 15.23%;
+  }
+  
+  .landing .vector-21 {
+    position: absolute;
+    width: 13.61%;
+    height: 2.37%;
+    top: 42.82%;
+    left: 15.34%;
+  }
+  
+  .landing .door {
+    top: 7.87%;
+    position: absolute;
+    width: 14.80%;
+    height: 62.88%;
+    left: 58.56%;
+  }
+  
+  .landing .vector-22 {
+    position: absolute;
+    width: 4.58%;
+    height: 9.82%;
+    top: 42.47%;
+    left: 7.77%;
+  }
+  
+  .landing .vector-23 {
+    position: absolute;
+    width: 4.58%;
+    height: 9.82%;
+    top: 42.47%;
+    left: 32.70%;
+  }
+  
+  .landing .vector-24 {
+    position: absolute;
+    width: 4.41%;
+    height: 12.79%;
+    top: 72.25%;
+    left: 47.90%;
+  }
+  
+  .landing .vector-25 {
+    position: absolute;
+    width: 3.94%;
+    height: 11.37%;
+    top: 71.67%;
+    left: 86.40%;
+  }
+  
+  .landing .vector-26 {
+    position: absolute;
+    width: 2.66%;
+    height: 2.24%;
+    top: 43.74%;
+    left: 69.59%;
+  }
+  
+  .landing .vector-27 {
+    position: absolute;
+    width: 3.89%;
+    height: 4.48%;
+    top: 55.71%;
+    left: 32.70%;
+  }
+  
+  .landing .vector-28 {
+    position: absolute;
+    width: 3.89%;
+    height: 4.48%;
+    top: 55.71%;
+    left: 8.47%;
+  }
+  
+  .landing .vector-29 {
+    position: absolute;
+    width: 53.90%;
+    height: 4.74%;
+    top: 37.61%;
+    left: 40.39%;
+  }
+  
+  .landing .windows {
+    position: absolute;
+    width: 4.58%;
+    height: 18.42%;
+    top: 10.25%;
+    left: 87.66%;
+  }
+  
+  .landing .windows-2 {
+    position: absolute;
+    width: 34.13%;
+    height: 18.82%;
+    top: 10.04%;
+    left: 24.94%;
+  }
+  
+  .landing .windows-3 {
+    position: absolute;
+    width: 12.94%;
+    height: 18.55%;
+    top: 10.18%;
+    left: 74.11%;
+  }
+  
+  .landing .windows-4 {
+    position: absolute;
+    width: 9.87%;
+    height: 18.08%;
+    top: 10.42%;
+    left: 61.14%;
+  }
+  
+  .landing .vector-30 {
+    position: absolute;
+    width: 34.80%;
+    height: 0;
+    top: 30.54%;
+    left: 58.85%;
+  }
+  
+  .landing .vector-31 {
+    position: absolute;
+    width: 27.42%;
+    height: 6.52%;
+    top: 33.23%;
+    left: 31.15%;
+  }
+  
+  .landing .vector-32 {
+    position: absolute;
+    width: 63.10%;
+    height: 0;
+    top: 7.20%;
+    left: 28.64%;
+  }
+  
+  .landing .vector-33 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 34.47%;
+    left: 60.72%;
+  }
+  
+  .landing .vector-34 {
+    position: absolute;
+    width: 3.09%;
+    height: 8.97%;
+    top: 24.39%;
+    left: 62.98%;
+  }
+  
+  .landing .vector-35 {
+    position: absolute;
+    width: 0;
+    height: 3.28%;
+    top: 31.34%;
+    left: 61.44%;
+  }
+  
+  .landing .vector-36 {
+    position: absolute;
+    width: 15.07%;
+    height: 6.29%;
+    top: 63.55%;
+    left: 14.27%;
+  }
+  
+  .landing .WILD-CAMPERS {
+    position: absolute;
+    width: 14.29%;
+    height: 2.48%;
+    top: 65.29%;
+    left: 14.72%;
+  }
+  
+  .landing .text-wrapper-20 {
+    position: absolute;
+    top: 2026px;
+    left: 158px;
+    width: 594px;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .group-8 {
+    position: absolute;
+    top: 1939px;
+    left: 985px;
+    width: 175px;
+    height: 54px;
+    display: flex;
+    transform: rotate(27.47deg);
+  }
+  
+  .landing .text-wrapper-21 {
+    margin-top: 15.0px;
+    margin-left: 8.1px;
+    transform: rotate(-26.23deg);
+    width: 10px;
+    height: 39px;
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-22 {
+    margin-top: 9.9px;
+    width: 4px;
+    height: 39px;
+    margin-left: 4.6px;
+    transform: rotate(-21.24deg);
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-23 {
+    margin-top: 6.8px;
+    width: 4px;
+    height: 39px;
+    margin-left: 5.0px;
+    transform: rotate(-17.49deg);
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-24 {
+    margin-top: 3.5px;
+    margin-left: 5.2px;
+    transform: rotate(-12.49deg);
+    width: 10px;
+    height: 39px;
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-25 {
+    margin-top: 0.9px;
+    width: 11px;
+    height: 39px;
+    margin-left: 5.7px;
+    transform: rotate(-6.04deg);
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-26 {
+    margin-top: 0.1px;
+    margin-left: 5.9px;
+    transform: rotate(0.62deg);
+    width: 11px;
+    height: 39px;
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-27 {
+    margin-top: 1.4px;
+    width: 14px;
+    height: 39px;
+    margin-left: 5.9px;
+    transform: rotate(7.91deg);
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-28 {
+    margin-top: 5.3px;
+    width: 12px;
+    height: 39px;
+    margin-left: 5.6px;
+    transform: rotate(15.41deg);
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-29 {
+    margin-top: 10.9px;
+    margin-left: 5.0px;
+    transform: rotate(22.28deg);
+    width: 11px;
+    height: 39px;
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-30 {
+    margin-top: 16.5px;
+    width: 4px;
+    height: 39px;
+    margin-left: 4.5px;
+    transform: rotate(27.48deg);
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .group-9 {
+    position: absolute;
+    top: 1975px;
+    left: 1003px;
+    width: 55px;
+    height: 53px;
+  }
+  
+  .landing .text-wrapper-31 {
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    width: 30px;
+    transform: rotate(-47.31deg);
+    font-family: "Shadows Into Light-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .line-3 {
+    position: absolute;
+    top: 16px;
+    left: 19px;
+    width: 12px;
+    height: 14px;
+  }
+  
+  .landing .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 113px;
+    background-color: #524434;
+  }
+  
+  .landing .frame-5 {
+    display: flex;
+    width: 64.94%;
+    height: 39.06%;
+    align-items: center;
+    justify-content: center;
+    gap: 61px;
+    padding: 3px 6px;
+    position: absolute;
+    top: 29.69%;
+    left: 17.58%;
+  }
+  
+  .landing .text-wrapper-32 {
+    position: relative;
+    width: 43px;
+    height: 22.3px;
+    color: #d9d9d9;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .landing .text-wrapper-33 {
+    position: relative;
+    width: fit-content;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #d9d9d9;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .landing .wildcamper-logo-2 {
+    position: absolute;
+    width: 14.14%;
+    height: 84.07%;
+    top: 9.73%;
+    left: 4.53%;
+    transform: rotate(180deg);
+  }
+  
+  .landing .vector-37 {
+    position: absolute;
+    width: 2.64%;
+    height: 7.64%;
+    top: 69.46%;
+    left: 21.81%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .group-10 {
+    position: absolute;
+    width: 88.97%;
+    height: 48.78%;
+    top: 0;
+    left: 5.11%;
+  }
+  
+  .landing .vector-38 {
+    position: absolute;
+    width: 21.15%;
+    height: 85.38%;
+    top: 11.18%;
+    left: 73.55%;
+  }
+  
+  .landing .vector-39 {
+    position: absolute;
+    width: 19.36%;
+    height: 71.21%;
+    top: 28.79%;
+    left: 43.38%;
+  }
+  
+  .landing .vector-40 {
+    position: absolute;
+    width: 18.65%;
+    height: 71.21%;
+    top: 24.02%;
+    left: 38.13%;
+  }
+  
+  .landing .vector-41 {
+    position: absolute;
+    width: 20.64%;
+    height: 86.97%;
+    top: 9.59%;
+    left: 0;
+  }
+  
+  .landing .vector-42 {
+    position: absolute;
+    width: 86.87%;
+    height: 59.63%;
+    top: 0;
+    left: 13.13%;
+  }
+  
+  .landing .vector-43 {
+    position: absolute;
+    width: 100%;
+    height: 5.62%;
+    top: 0;
+    left: 0;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-44 {
+    position: absolute;
+    width: 12.05%;
+    height: 18.99%;
+    top: 31.31%;
+    left: 83.02%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-45 {
+    position: absolute;
+    width: 7.65%;
+    height: 21.78%;
+    top: 11.98%;
+    left: 84.59%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-46 {
+    position: absolute;
+    width: 8.91%;
+    height: 24.45%;
+    top: 9.31%;
+    left: 45.70%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-47 {
+    position: absolute;
+    width: 37.36%;
+    height: 8.01%;
+    top: 89.76%;
+    left: 32.52%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-48 {
+    position: absolute;
+    width: 29.30%;
+    height: 8.84%;
+    top: 90.18%;
+    left: 60.31%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-49 {
+    position: absolute;
+    width: 88.25%;
+    height: 66.12%;
+    top: 28.97%;
+    left: 7.42%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-50 {
+    position: absolute;
+    width: 17.97%;
+    height: 24.32%;
+    top: 28.97%;
+    left: 39.45%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-51 {
+    position: absolute;
+    width: 83.99%;
+    height: 48.34%;
+    top: 46.29%;
+    left: 7.37%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-52 {
+    position: absolute;
+    width: 17.33%;
+    height: 23.86%;
+    top: 30.16%;
+    left: 77.52%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-53 {
+    position: absolute;
+    width: 18.09%;
+    height: 22.41%;
+    top: 37.68%;
+    left: 12.84%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-54 {
+    position: absolute;
+    width: 13.61%;
+    height: 2.37%;
+    top: 39.79%;
+    left: 15.23%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-55 {
+    position: absolute;
+    width: 13.61%;
+    height: 2.37%;
+    top: 49.61%;
+    left: 15.34%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-56 {
+    position: absolute;
+    width: 13.61%;
+    height: 2.37%;
+    top: 44.70%;
+    left: 15.23%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-57 {
+    position: absolute;
+    width: 13.61%;
+    height: 2.37%;
+    top: 54.82%;
+    left: 15.34%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .door-2 {
+    top: 28.72%;
+    transform: rotate(-180deg);
+    position: absolute;
+    width: 14.80%;
+    height: 62.88%;
+    left: 58.56%;
+  }
+  
+  .landing .vector-58 {
+    position: absolute;
+    width: 4.58%;
+    height: 9.82%;
+    top: 47.71%;
+    left: 7.77%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-59 {
+    position: absolute;
+    width: 4.58%;
+    height: 9.82%;
+    top: 47.71%;
+    left: 32.70%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-60 {
+    position: absolute;
+    width: 4.41%;
+    height: 12.79%;
+    top: 14.96%;
+    left: 47.90%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-61 {
+    position: absolute;
+    width: 3.94%;
+    height: 11.37%;
+    top: 16.96%;
+    left: 86.40%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-62 {
+    position: absolute;
+    width: 2.66%;
+    height: 2.24%;
+    top: 54.02%;
+    left: 69.59%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-63 {
+    position: absolute;
+    width: 3.89%;
+    height: 4.48%;
+    top: 39.81%;
+    left: 32.70%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-64 {
+    position: absolute;
+    width: 3.89%;
+    height: 4.48%;
+    top: 39.81%;
+    left: 8.47%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-65 {
+    position: absolute;
+    width: 53.90%;
+    height: 4.74%;
+    top: 57.65%;
+    left: 40.39%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .windows-5 {
+    position: absolute;
+    width: 4.58%;
+    height: 18.42%;
+    top: 71.33%;
+    left: 87.66%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .windows-6 {
+    position: absolute;
+    width: 34.13%;
+    height: 18.82%;
+    top: 71.13%;
+    left: 24.94%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .windows-7 {
+    position: absolute;
+    width: 12.94%;
+    height: 18.55%;
+    top: 71.27%;
+    left: 74.11%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .windows-8 {
+    position: absolute;
+    width: 9.87%;
+    height: 18.08%;
+    top: 71.50%;
+    left: 61.14%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-66 {
+    position: absolute;
+    width: 34.80%;
+    height: 0;
+    top: 67.86%;
+    left: 58.85%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-67 {
+    position: absolute;
+    width: 27.42%;
+    height: 6.52%;
+    top: 59.89%;
+    left: 31.15%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-68 {
+    position: absolute;
+    width: 63.10%;
+    height: 0;
+    top: 91.48%;
+    left: 28.64%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-69 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 63.62%;
+    left: 60.72%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-70 {
+    position: absolute;
+    width: 3.09%;
+    height: 8.97%;
+    top: 66.65%;
+    left: 62.98%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-71 {
+    position: absolute;
+    width: 0;
+    height: 3.28%;
+    top: 63.80%;
+    left: 61.46%;
+    transform: rotate(-180deg);
+  }
+  
+  .landing .vector-72 {
+    position: absolute;
+    width: 15.07%;
+    height: 6.29%;
+    top: 30.16%;
+    left: 14.27%;
+    transform: rotate(-180deg);
+  }
+  

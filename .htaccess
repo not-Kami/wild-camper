@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Rediriger la racine vers index.php avec page=home
+RewriteRule ^$ index.php?page=home [L,QSA]
+
+# Rediriger toutes les requêtes vers index.php sauf les fichiers existants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Autoriser l'accès aux fichiers statiques
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+

@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: wild-camper-web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+      - DB_HOST=db
+      - DB_NAME=wildcamper
+      - DB_USER=wildcamper
+      - DB_PASS=wildcamper123
+    networks:
+      - wild-camper-network
+
+  db:
+    image: mariadb:10.11
+    container_name: wild-camper-db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: wildcamper
+      MYSQL_USER: wildcamper
+      MYSQL_PASSWORD: wildcamper123
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/backup/wldcamper.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - wild-camper-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: wild-camper-phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: rootpassword
+    depends_on:
+      - db
+    networks:
+      - wild-camper-network
+
+volumes:
+  db_data:
+
+networks:
+  wild-camper-network:
+    driver: bridge
+

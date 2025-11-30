@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: var(--spacing-xlarge);
+    text-align: center;
+    color: var(--white-text);
+}
+
+.container h1 {
+    font-size: var(--font-size-h1);
+    color: var(--white-text);
+    margin-bottom: var(--spacing-medium);
+}
+
+.container p {
+    font-size: var(--font-size-paragraph);
+    color: var(--light-grey);
+    margin-bottom: var(--spacing-large);
+}
+
+.container a {
+    color: var(--white-text);
+    text-decoration: underline;
+}
+
