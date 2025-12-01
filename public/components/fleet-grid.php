@@ -1,6 +1,6 @@
 <?php
-// Inclure le composant vehicle-card
-include __DIR__ . '/vehicle-card.php';
+// Inclure le composant unifié
+include __DIR__ . '/card.php';
 ?>
 
 <section class="fleet-grid-section">
@@ -8,11 +8,12 @@ include __DIR__ . '/vehicle-card.php';
     <div class="fleet-grid">
         <?php
         foreach ($vehicles as $vehicle) {
-            renderVehicleCard(
+            renderCard(
                 $vehicle['image'],
                 $vehicle['name'],
                 $vehicle['description'],
-                '#'
+                '#',
+                'carousel'
             );
         }
         ?>

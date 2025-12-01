@@ -1,0 +1,278 @@
+/* Styles unifiés pour les cartes de véhicules - composant réutilisable */
+
+/* Carte par défaut (pour la grille) */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.card-content {
+    padding: var(--spacing-medium);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    min-height: 200px;
+}
+
+.card-content h3 {
+    font-size: var(--font-size-h4);
+    color: #333;
+    margin: 0 0 var(--spacing-small) 0;
+    font-weight: 600;
+    font-family: var(--font-primary);
+}
+
+.card-content p {
+    font-size: var(--font-size-paragraph);
+    color: #666;
+    line-height: 1.5;
+    margin: 0 0 var(--spacing-medium) 0;
+    flex-grow: 1;
+    font-family: var(--font-primary);
+}
+
+/* Variante carousel */
+.card--carousel {
+    width: 300px;
+    height: 446px;
+    flex: 0 0 300px;
+    max-width: 300px;
+    background-color: #1e1e1e;
+    border-radius: 20px 0 16px 16px;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.card--carousel:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.card--carousel .card-header {
+    width: 100%;
+    height: 49px;
+    background-color: #d9d9d9;
+    padding: 15px 58px;
+    border-radius: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.card--carousel .card-header h3 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--kaki-green);
+    margin: 0;
+    text-align: center;
+}
+
+.card--carousel .card-image {
+    width: 100%;
+    height: 218px;
+    background-color: #d9d9d9;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.card--carousel .card-content {
+    width: 100%;
+    min-height: 179px;
+    background-color: #1e1e1e;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card--carousel .card-content p {
+    width: 85.26%;
+    margin: 20px auto 10px auto;
+    padding: 0 7.37%;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: center;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.card--carousel .card-content h3 {
+    display: none; /* Le titre est dans le header pour la variante carousel */
+}
+
+/* Styles pour les boutons "Learn More" */
+.button--learn-more {
+    background-color: var(--kaki-green);
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: var(--font-size-paragraph);
+    display: inline-block;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button--learn-more:hover {
+    background-color: var(--accent-brown);
+}
+
+/* Variante carousel pour le bouton */
+.card--carousel .button--learn-more {
+    width: 48.42%;
+    min-width: 120px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Pour le carousel Splide */
+.splide__slide .card {
+    margin: 0;
+    height: 100%;
+    min-height: 450px;
+    max-height: 450px;
+    width: 100%;
+}
+
+.splide__slide .card--carousel {
+    min-height: 446px;
+    max-height: 446px;
+}
+
+.splide__slide .card-image {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.splide__slide .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+
+/* Styles pour la grille de flotte */
+.fleet-grid-section {
+    padding: var(--spacing-xlarge);
+    background-color: var(--main-bg-color);
+}
+
+.fleet-grid-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xlarge);
+    color: var(--white-text);
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-h2);
+}
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: var(--spacing-large);
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.fleet-grid .card--carousel {
+    width: 300px;
+    max-width: 300px;
+    flex: 0 0 300px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .fleet-grid {
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-image {
+        height: 200px;
+        min-height: 200px;
+        max-height: 200px;
+    }
+    
+    .card-content {
+        padding: var(--spacing-small);
+    }
+    
+    .card--carousel {
+        width: 100%;
+        max-width: 400px;
+        flex: 0 0 auto;
+    }
+    
+    .fleet-grid {
+        grid-template-columns: 300px;
+        gap: var(--spacing-medium);
+        justify-content: center;
+    }
+}
+

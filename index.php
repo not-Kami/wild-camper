@@ -1,12 +1,15 @@
 <?php 
+session_start();
 
 // Définition du layout des pages (CSS à charger)
 $layout = [
-    'home' => ['hero', 'carousel', 'contact', 'vehicle-card'],
+    'home' => ['hero', 'carousel', 'ideas', 'contact', 'card'],
     'about' => ['contact'], 
-    'fleet' => ['vehicle-card', 'contact'], 
+    'fleet' => ['card', 'contact'], 
     'booking' => ['contact'], 
+    'trips' => ['contact'],
     'contact' => ['contact'],
+    'admin' => ['admin'],
     '404' => ['contact']
 ];
 
